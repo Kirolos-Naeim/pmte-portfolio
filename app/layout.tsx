@@ -13,11 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PMTE | Demolition, Earthworks & Marine Works",
-  description: "Abu Dhabi contractor delivering demolition, earthworks, marine works and construction support since 1994.",
+  title: "PMTE | Company Portfolio | Abu Dhabi",
+  description: "Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C. Company Portfolio: demolition, earthworks, marine works and industrial support in Abu Dhabi since 1994.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
+  },
+  openGraph: {
+    title: "PMTE | Demolition, Earthworks & Marine Works",
+    description: "Established 1994 in Abu Dhabi, UAE.",
+    images: ["/assets/social/pmte-social-cover.png"],
   },
 };
 
