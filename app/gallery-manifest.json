@@ -1,0 +1,732 @@
+[
+  {
+    "id": 1,
+    "src": "/gallery/gallery-001-p05-01.jpg",
+    "category": "Marine",
+    "project": "Shoreline Rock Arrangement",
+    "alt": "Shoreline Rock Arrangement - project photograph 1",
+    "sourcePage": 5,
+    "width": 450,
+    "height": 800
+  },
+  {
+    "id": 2,
+    "src": "/gallery/gallery-002-p05-02.jpg",
+    "category": "Marine",
+    "project": "Shoreline Rock Arrangement",
+    "alt": "Shoreline Rock Arrangement - project photograph 2",
+    "sourcePage": 5,
+    "width": 600,
+    "height": 800
+  },
+  {
+    "id": 3,
+    "src": "/gallery/gallery-003-p05-03.jpg",
+    "category": "Marine",
+    "project": "Shoreline Rock Arrangement",
+    "alt": "Shoreline Rock Arrangement - project photograph 3",
+    "sourcePage": 5,
+    "width": 600,
+    "height": 800
+  },
+  {
+    "id": 4,
+    "src": "/gallery/gallery-004-p05-04.jpg",
+    "category": "Marine",
+    "project": "Shoreline Rock Arrangement",
+    "alt": "Shoreline Rock Arrangement - project photograph 4",
+    "sourcePage": 5,
+    "width": 600,
+    "height": 800
+  },
+  {
+    "id": 5,
+    "src": "/gallery/gallery-005-p06-01.jpg",
+    "category": "Marine",
+    "project": "Mina Zayed Harbour Marine Works",
+    "alt": "Mina Zayed Harbour Marine Works - project photograph 1",
+    "sourcePage": 6,
+    "width": 450,
+    "height": 800
+  },
+  {
+    "id": 6,
+    "src": "/gallery/gallery-006-p06-02.jpg",
+    "category": "Marine",
+    "project": "Mina Zayed Harbour Marine Works",
+    "alt": "Mina Zayed Harbour Marine Works - project photograph 2",
+    "sourcePage": 6,
+    "width": 450,
+    "height": 800
+  },
+  {
+    "id": 7,
+    "src": "/gallery/gallery-007-p06-03.jpg",
+    "category": "Marine",
+    "project": "Mina Zayed Harbour Marine Works",
+    "alt": "Mina Zayed Harbour Marine Works - project photograph 3",
+    "sourcePage": 6,
+    "width": 450,
+    "height": 800
+  },
+  {
+    "id": 8,
+    "src": "/gallery/gallery-008-p06-04.jpg",
+    "category": "Marine",
+    "project": "Mina Zayed Harbour Marine Works",
+    "alt": "Mina Zayed Harbour Marine Works - project photograph 4",
+    "sourcePage": 6,
+    "width": 450,
+    "height": 800
+  },
+  {
+    "id": 9,
+    "src": "/gallery/gallery-009-p08-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 8,
+    "width": 1019,
+    "height": 1033
+  },
+  {
+    "id": 10,
+    "src": "/gallery/gallery-010-p09-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 9,
+    "width": 944,
+    "height": 1368
+  },
+  {
+    "id": 11,
+    "src": "/gallery/gallery-011-p10-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 10,
+    "width": 944,
+    "height": 1328
+  },
+  {
+    "id": 12,
+    "src": "/gallery/gallery-012-p11-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 11,
+    "width": 944,
+    "height": 1280
+  },
+  {
+    "id": 13,
+    "src": "/gallery/gallery-013-p13-01.jpg",
+    "category": "Demolition",
+    "project": "Concrete Cutting and Removal",
+    "alt": "Concrete Cutting and Removal - project photograph 1",
+    "sourcePage": 13,
+    "width": 990,
+    "height": 672
+  },
+  {
+    "id": 14,
+    "src": "/gallery/gallery-014-p13-02.jpg",
+    "category": "Demolition",
+    "project": "Concrete Cutting and Removal",
+    "alt": "Concrete Cutting and Removal - project photograph 2",
+    "sourcePage": 13,
+    "width": 990,
+    "height": 672
+  },
+  {
+    "id": 15,
+    "src": "/gallery/gallery-015-p15-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 15,
+    "width": 992,
+    "height": 576
+  },
+  {
+    "id": 16,
+    "src": "/gallery/gallery-016-p15-02.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 2",
+    "sourcePage": 15,
+    "width": 992,
+    "height": 576
+  },
+  {
+    "id": 17,
+    "src": "/gallery/gallery-017-p16-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 16,
+    "width": 1005,
+    "height": 1355
+  },
+  {
+    "id": 18,
+    "src": "/gallery/gallery-018-p17-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 17,
+    "width": 832,
+    "height": 385
+  },
+  {
+    "id": 19,
+    "src": "/gallery/gallery-019-p17-02.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 2",
+    "sourcePage": 17,
+    "width": 688,
+    "height": 385
+  },
+  {
+    "id": 20,
+    "src": "/gallery/gallery-020-p17-03.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 3",
+    "sourcePage": 17,
+    "width": 920,
+    "height": 504
+  },
+  {
+    "id": 21,
+    "src": "/gallery/gallery-021-p18-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 18,
+    "width": 713,
+    "height": 678
+  },
+  {
+    "id": 22,
+    "src": "/gallery/gallery-022-p18-02.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 2",
+    "sourcePage": 18,
+    "width": 798,
+    "height": 605
+  },
+  {
+    "id": 23,
+    "src": "/gallery/gallery-023-p19-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 19,
+    "width": 1080,
+    "height": 1392
+  },
+  {
+    "id": 24,
+    "src": "/gallery/gallery-024-p20-01.jpg",
+    "category": "Demolition",
+    "project": "ADNEC Demolition - Phases 1 to 4",
+    "alt": "ADNEC Demolition - Phases 1 to 4 - project photograph 1",
+    "sourcePage": 20,
+    "width": 985,
+    "height": 1436
+  },
+  {
+    "id": 25,
+    "src": "/gallery/gallery-025-p21-01.jpg",
+    "category": "Demolition",
+    "project": "KMART Demolition - Abu Dhabi",
+    "alt": "KMART Demolition - Abu Dhabi - project photograph 1",
+    "sourcePage": 21,
+    "width": 959,
+    "height": 1040
+  },
+  {
+    "id": 26,
+    "src": "/gallery/gallery-026-p22-01.jpg",
+    "category": "Demolition",
+    "project": "Warehouse Demolition - Abu Dhabi",
+    "alt": "Warehouse Demolition - Abu Dhabi - project photograph 1",
+    "sourcePage": 22,
+    "width": 976,
+    "height": 936
+  },
+  {
+    "id": 27,
+    "src": "/gallery/gallery-027-p23-01.jpg",
+    "category": "Demolition",
+    "project": "Saadiyat Bridge Wall Demolition",
+    "alt": "Saadiyat Bridge Wall Demolition - project photograph 1",
+    "sourcePage": 23,
+    "width": 920,
+    "height": 961
+  },
+  {
+    "id": 28,
+    "src": "/gallery/gallery-028-p24-01.jpg",
+    "category": "Demolition",
+    "project": "Mina Plaza Demolition",
+    "alt": "Mina Plaza Demolition - project photograph 1",
+    "sourcePage": 24,
+    "width": 1112,
+    "height": 580
+  },
+  {
+    "id": 29,
+    "src": "/gallery/gallery-029-p24-02.jpg",
+    "category": "Demolition",
+    "project": "Mina Plaza Demolition",
+    "alt": "Mina Plaza Demolition - project photograph 2",
+    "sourcePage": 24,
+    "width": 1072,
+    "height": 577
+  },
+  {
+    "id": 30,
+    "src": "/gallery/gallery-030-p25-01.jpg",
+    "category": "Demolition",
+    "project": "Mina Plaza Demolition",
+    "alt": "Mina Plaza Demolition - project photograph 1",
+    "sourcePage": 25,
+    "width": 1025,
+    "height": 544
+  },
+  {
+    "id": 31,
+    "src": "/gallery/gallery-031-p25-02.jpg",
+    "category": "Demolition",
+    "project": "Mina Plaza Demolition",
+    "alt": "Mina Plaza Demolition - project photograph 2",
+    "sourcePage": 25,
+    "width": 1038,
+    "height": 710
+  },
+  {
+    "id": 32,
+    "src": "/gallery/gallery-032-p26-01.jpg",
+    "category": "Demolition",
+    "project": "Mina Plaza Demolition",
+    "alt": "Mina Plaza Demolition - project photograph 1",
+    "sourcePage": 26,
+    "width": 913,
+    "height": 1279
+  },
+  {
+    "id": 33,
+    "src": "/gallery/gallery-033-p27-01.jpg",
+    "category": "Earthworks",
+    "project": "Mina Zayed Site Preparation",
+    "alt": "Mina Zayed Site Preparation - project photograph 1",
+    "sourcePage": 27,
+    "width": 952,
+    "height": 496
+  },
+  {
+    "id": 34,
+    "src": "/gallery/gallery-034-p27-02.jpg",
+    "category": "Earthworks",
+    "project": "Mina Zayed Site Preparation",
+    "alt": "Mina Zayed Site Preparation - project photograph 2",
+    "sourcePage": 27,
+    "width": 952,
+    "height": 521
+  },
+  {
+    "id": 35,
+    "src": "/gallery/gallery-035-p28-01.jpg",
+    "category": "Demolition",
+    "project": "Mina Zayed Buildings Removal",
+    "alt": "Mina Zayed Buildings Removal - project photograph 1",
+    "sourcePage": 28,
+    "width": 1060,
+    "height": 1226
+  },
+  {
+    "id": 36,
+    "src": "/gallery/gallery-036-p30-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Clearing and Levelling",
+    "alt": "Ground Clearing and Levelling - project photograph 1",
+    "sourcePage": 30,
+    "width": 1024,
+    "height": 1228
+  },
+  {
+    "id": 37,
+    "src": "/gallery/gallery-037-p31-01.jpg",
+    "category": "Earthworks",
+    "project": "Mina Zayed Asphalt Removal",
+    "alt": "Mina Zayed Asphalt Removal - project photograph 1",
+    "sourcePage": 31,
+    "width": 1096,
+    "height": 1282
+  },
+  {
+    "id": 38,
+    "src": "/gallery/gallery-038-p32-01.jpg",
+    "category": "Earthworks",
+    "project": "National Housing Sales Centre",
+    "alt": "National Housing Sales Centre - project photograph 1",
+    "sourcePage": 32,
+    "width": 1062,
+    "height": 1070
+  },
+  {
+    "id": 39,
+    "src": "/gallery/gallery-039-p34-01.jpg",
+    "category": "Demolition",
+    "project": "Field Demolition Operations",
+    "alt": "Field Demolition Operations - project photograph 1",
+    "sourcePage": 34,
+    "width": 948,
+    "height": 734
+  },
+  {
+    "id": 40,
+    "src": "/gallery/gallery-040-p34-02.jpg",
+    "category": "Demolition",
+    "project": "Field Demolition Operations",
+    "alt": "Field Demolition Operations - project photograph 2",
+    "sourcePage": 34,
+    "width": 960,
+    "height": 751
+  },
+  {
+    "id": 41,
+    "src": "/gallery/gallery-041-p35-01.jpg",
+    "category": "Demolition",
+    "project": "Field Demolition Operations",
+    "alt": "Field Demolition Operations - project photograph 1",
+    "sourcePage": 35,
+    "width": 960,
+    "height": 631
+  },
+  {
+    "id": 42,
+    "src": "/gallery/gallery-042-p35-02.jpg",
+    "category": "Demolition",
+    "project": "Field Demolition Operations",
+    "alt": "Field Demolition Operations - project photograph 2",
+    "sourcePage": 35,
+    "width": 960,
+    "height": 828
+  },
+  {
+    "id": 43,
+    "src": "/gallery/gallery-043-p36-01.jpg",
+    "category": "Earthworks",
+    "project": "Site Clearing Operations",
+    "alt": "Site Clearing Operations - project photograph 1",
+    "sourcePage": 36,
+    "width": 1010,
+    "height": 692
+  },
+  {
+    "id": 44,
+    "src": "/gallery/gallery-044-p36-02.jpg",
+    "category": "Earthworks",
+    "project": "Site Clearing Operations",
+    "alt": "Site Clearing Operations - project photograph 2",
+    "sourcePage": 36,
+    "width": 1010,
+    "height": 760
+  },
+  {
+    "id": 45,
+    "src": "/gallery/gallery-045-p37-01.jpg",
+    "category": "Equipment",
+    "project": "Heavy Lifting Operations",
+    "alt": "Heavy Lifting Operations - project photograph 1",
+    "sourcePage": 37,
+    "width": 898,
+    "height": 890
+  },
+  {
+    "id": 46,
+    "src": "/gallery/gallery-046-p37-02.jpg",
+    "category": "Equipment",
+    "project": "Heavy Lifting Operations",
+    "alt": "Heavy Lifting Operations - project photograph 2",
+    "sourcePage": 37,
+    "width": 889,
+    "height": 865
+  },
+  {
+    "id": 47,
+    "src": "/gallery/gallery-047-p38-01.jpg",
+    "category": "Equipment",
+    "project": "Equipment and Material Handling",
+    "alt": "Equipment and Material Handling - project photograph 1",
+    "sourcePage": 38,
+    "width": 1009,
+    "height": 474
+  },
+  {
+    "id": 48,
+    "src": "/gallery/gallery-048-p38-02.jpg",
+    "category": "Equipment",
+    "project": "Equipment and Material Handling",
+    "alt": "Equipment and Material Handling - project photograph 2",
+    "sourcePage": 38,
+    "width": 525,
+    "height": 480
+  },
+  {
+    "id": 49,
+    "src": "/gallery/gallery-049-p39-01.jpg",
+    "category": "Marine",
+    "project": "Waterfront Removal Works",
+    "alt": "Waterfront Removal Works - project photograph 1",
+    "sourcePage": 39,
+    "width": 576,
+    "height": 585
+  },
+  {
+    "id": 50,
+    "src": "/gallery/gallery-050-p39-02.jpg",
+    "category": "Marine",
+    "project": "Waterfront Removal Works",
+    "alt": "Waterfront Removal Works - project photograph 2",
+    "sourcePage": 39,
+    "width": 570,
+    "height": 630
+  },
+  {
+    "id": 51,
+    "src": "/gallery/gallery-051-p40-01.jpg",
+    "category": "Marine",
+    "project": "Marine and Waterfront Works",
+    "alt": "Marine and Waterfront Works - project photograph 1",
+    "sourcePage": 40,
+    "width": 576,
+    "height": 605
+  },
+  {
+    "id": 52,
+    "src": "/gallery/gallery-052-p40-02.jpg",
+    "category": "Marine",
+    "project": "Marine and Waterfront Works",
+    "alt": "Marine and Waterfront Works - project photograph 2",
+    "sourcePage": 40,
+    "width": 576,
+    "height": 1024
+  },
+  {
+    "id": 53,
+    "src": "/gallery/gallery-053-p41-01.jpg",
+    "category": "Transport",
+    "project": "Waste Transport and Site Clearance",
+    "alt": "Waste Transport and Site Clearance - project photograph 1",
+    "sourcePage": 41,
+    "width": 960,
+    "height": 797
+  },
+  {
+    "id": 54,
+    "src": "/gallery/gallery-054-p41-02.jpg",
+    "category": "Transport",
+    "project": "Waste Transport and Site Clearance",
+    "alt": "Waste Transport and Site Clearance - project photograph 2",
+    "sourcePage": 41,
+    "width": 959,
+    "height": 668
+  },
+  {
+    "id": 55,
+    "src": "/gallery/gallery-055-p42-01.jpg",
+    "category": "Demolition",
+    "project": "Structural Removal Works",
+    "alt": "Structural Removal Works - project photograph 1",
+    "sourcePage": 42,
+    "width": 717,
+    "height": 983
+  },
+  {
+    "id": 56,
+    "src": "/gallery/gallery-056-p43-01.jpg",
+    "category": "Demolition",
+    "project": "Structural Demolition Works",
+    "alt": "Structural Demolition Works - project photograph 1",
+    "sourcePage": 43,
+    "width": 899,
+    "height": 765
+  },
+  {
+    "id": 57,
+    "src": "/gallery/gallery-057-p43-02.jpg",
+    "category": "Demolition",
+    "project": "Structural Demolition Works",
+    "alt": "Structural Demolition Works - project photograph 2",
+    "sourcePage": 43,
+    "width": 959,
+    "height": 756
+  },
+  {
+    "id": 58,
+    "src": "/gallery/gallery-058-p44-01.jpg",
+    "category": "Demolition",
+    "project": "Structural Demolition Works",
+    "alt": "Structural Demolition Works - project photograph 1",
+    "sourcePage": 44,
+    "width": 951,
+    "height": 775
+  },
+  {
+    "id": 59,
+    "src": "/gallery/gallery-059-p44-02.jpg",
+    "category": "Demolition",
+    "project": "Structural Demolition Works",
+    "alt": "Structural Demolition Works - project photograph 2",
+    "sourcePage": 44,
+    "width": 958,
+    "height": 692
+  },
+  {
+    "id": 60,
+    "src": "/gallery/gallery-060-p45-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 45,
+    "width": 1096,
+    "height": 1384
+  },
+  {
+    "id": 61,
+    "src": "/gallery/gallery-061-p46-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 46,
+    "width": 1015,
+    "height": 1264
+  },
+  {
+    "id": 62,
+    "src": "/gallery/gallery-062-p47-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 47,
+    "width": 1056,
+    "height": 1404
+  },
+  {
+    "id": 63,
+    "src": "/gallery/gallery-063-p48-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 48,
+    "width": 1104,
+    "height": 1391
+  },
+  {
+    "id": 64,
+    "src": "/gallery/gallery-064-p49-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 49,
+    "width": 1069,
+    "height": 1379
+  },
+  {
+    "id": 65,
+    "src": "/gallery/gallery-065-p50-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 50,
+    "width": 1090,
+    "height": 1384
+  },
+  {
+    "id": 66,
+    "src": "/gallery/gallery-066-p51-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 51,
+    "width": 1048,
+    "height": 1464
+  },
+  {
+    "id": 67,
+    "src": "/gallery/gallery-067-p52-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 52,
+    "width": 1008,
+    "height": 1328
+  },
+  {
+    "id": 68,
+    "src": "/gallery/gallery-068-p53-01.jpg",
+    "category": "Earthworks",
+    "project": "Ground Works - Al Ain Region",
+    "alt": "Ground Works - Al Ain Region - project photograph 1",
+    "sourcePage": 53,
+    "width": 1031,
+    "height": 1344
+  },
+  {
+    "id": 69,
+    "src": "/gallery/gallery-069-p54-01.jpg",
+    "category": "Earthworks",
+    "project": "Al Ain Zoo Site Works",
+    "alt": "Al Ain Zoo Site Works - project photograph 1",
+    "sourcePage": 54,
+    "width": 1072,
+    "height": 1175
+  },
+  {
+    "id": 70,
+    "src": "/gallery/gallery-070-p55-01.jpg",
+    "category": "Earthworks",
+    "project": "Al Ain Zoo Site Works",
+    "alt": "Al Ain Zoo Site Works - project photograph 1",
+    "sourcePage": 55,
+    "width": 1096,
+    "height": 1360
+  },
+  {
+    "id": 71,
+    "src": "/gallery/gallery-071-p56-01.jpg",
+    "category": "Earthworks",
+    "project": "Al Ain Zoo Site Works",
+    "alt": "Al Ain Zoo Site Works - project photograph 1",
+    "sourcePage": 56,
+    "width": 1037,
+    "height": 1392
+  },
+  {
+    "id": 72,
+    "src": "/gallery/gallery-072-p57-01.jpg",
+    "category": "Earthworks",
+    "project": "Al Ain Zoo Site Works",
+    "alt": "Al Ain Zoo Site Works - project photograph 1",
+    "sourcePage": 57,
+    "width": 1018,
+    "height": 1464
+  },
+  {
+    "id": 73,
+    "src": "/gallery/gallery-073-p58-01.jpg",
+    "category": "Earthworks",
+    "project": "Al Ain Zoo Site Works",
+    "alt": "Al Ain Zoo Site Works - project photograph 1",
+    "sourcePage": 58,
+    "width": 1024,
+    "height": 1336
+  }
+]
