@@ -186,6 +186,9 @@ h1 span { color: #c9cdd2; }
 .record-number span { margin-left: 8px; color: white; font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
 .record-content h2 { max-width: 880px; margin: 35px 0 22px; font-size: clamp(35px, 4vw, 62px); font-weight: 580; letter-spacing: -.05em; line-height: .98; text-transform: uppercase; }
 .record-content > p:last-child { max-width: 750px; margin: 0; color: #ccd0d4; font-size: 15px; line-height: 1.72; }
+.record-certificate { position: absolute; top: 110px; right: 0; display: block; width: min(235px, 23vw); overflow: hidden; border: 1px solid rgba(255,255,255,.35); background: #171717; box-shadow: 0 18px 40px rgba(0,0,0,.28); }
+.record-certificate img { display: block; width: 100%; aspect-ratio: .69 / 1; object-fit: cover; object-position: top; }
+.record-certificate span { display: block; padding: 11px 13px; border-top: 2px solid var(--red); color: white; font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 
 /* Fleet */
 .fleet-top { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(350px, .95fr); gap: 78px; margin-top: 68px; }
@@ -222,6 +225,14 @@ h1 span { color: #c9cdd2; }
 .status.current { color: #29634a; }
 .status.warning { color: var(--red); background: #fff4f4; }
 .submission-alert { display: grid; grid-template-columns: 190px 1fr; gap: 28px; margin-top: 20px; padding: 23px; border: 1px solid #edb9bb; background: #fff7f7; }
+.certificate-library { display: grid; grid-template-columns: minmax(240px, .75fr) minmax(0, 1.25fr); gap: 55px; margin-top: 62px; padding-top: 54px; border-top: 1px solid var(--line); }
+.certificate-library h3 { margin: 0 0 15px; font-size: 28px; font-weight: 600; letter-spacing: -.045em; text-transform: uppercase; }
+.certificate-library > div > p:last-child { max-width: 410px; margin: 0; color: var(--steel); font-size: 13px; line-height: 1.7; }
+.certificate-list { border-top: 1px solid var(--line); }
+.certificate-list a { display: grid; grid-template-columns: 64px 1fr auto; gap: 16px; align-items: center; min-height: 52px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 12px; font-weight: 600; }
+.certificate-list a:hover { color: var(--red); }
+.certificate-list span { color: var(--red); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .12em; }
+.certificate-list b { color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
 .submission-alert strong { color: var(--red); font-size: 12px; text-transform: uppercase; }
 .submission-alert p { margin: 0; color: #5b5151; font-size: 12px; line-height: 1.65; }
 .credential-appendix { margin-top: 31px; border: 1px solid var(--line); }
@@ -333,6 +344,7 @@ h1 span { color: #c9cdd2; }
   .capability-card h3 { margin-top: 36px; }
   .record-section { min-height: 720px; }
   .record-content { width: 100%; padding: 85px 20px; }
+  .record-certificate { position: static; width: min(280px, 100%); margin-top: 32px; }
   .equipment-strip { grid-template-columns: 1fr 1fr; height: auto; }
   .equipment-strip img { aspect-ratio: 1.15 / 1; }
   .equipment-list { grid-template-columns: 1fr 1fr; }
@@ -344,6 +356,8 @@ h1 span { color: #c9cdd2; }
   .credential-table td { display: grid; grid-template-columns: 108px 1fr; gap: 14px; padding: 13px 15px; border-right: 0; }
   .credential-table td::before { content: attr(data-label); color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
   .submission-alert { grid-template-columns: 1fr; }
+  .certificate-library { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; padding-top: 42px; }
+  .certificate-list a { grid-template-columns: 50px 1fr auto; gap: 9px; }
   .leadership-card { padding: 24px; }
   .leadership-card dl div { grid-template-columns: 95px 1fr; }
   .gallery-toolbar { align-items: flex-start; flex-direction: column; }
@@ -377,6 +391,7 @@ h1 span { color: #c9cdd2; }
   html { scroll-behavior: auto; }
   body { background: white; color: #151515; font-size: 9pt; }
   .site-header nav, .header-contact, .hero-actions, .document-link, .gallery-toolbar, .gallery-open, .lightbox, footer a { display: none !important; }
+  .record-certificate { display: none; }
   .print-cover { min-height: 273mm; height: 273mm; break-after: page; page-break-after: always; }
   .site-header { grid-template-columns: 1fr; padding: 8mm 10mm; }
   .brand img { width: 78mm; }

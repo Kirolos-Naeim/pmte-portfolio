@@ -46,6 +46,18 @@ const clients = [
   { name: "Modon", image: "/assets/clients/modon.png" },
 ];
 
+const certificateLibrary = [
+  "Capacity and energy classification certificate · 2026",
+  "Chamber of Commerce certificate · 2027",
+  "Civil Defence compliance certificate · 2027",
+  "Commercial registration certificate · 2027",
+  "Demolition activity classification certificate · 2028",
+  "VAT registration certificate",
+];
+
+const certificateFolder = "https://1drv.ms/f/c/2cea8bedd36ce876/IgCbfHlfjL_jT4soDK1xO_oZAYiJIpqsfkrsYcca6UfgT6g?e=xGfrpT";
+const supportingCertificateFolder = "https://1drv.ms/f/c/2cea8bedd36ce876/IgDyu5jf9pl2R7HV4qYlRoIVAenS9xqrO9SBvLu6wHWskZQ?e=2vklPR";
+
 export default function Home() {
   return (
     <main>
@@ -87,7 +99,7 @@ export default function Home() {
         <div className="client-grid">{clients.map((client) => <article className="client-card" key={client.name}><img src={client.image} alt={`${client.name} logo`} loading="lazy" /></article>)}</div>
       </div></section>
 
-      <section className="record-section print-page" id="achievement"><div className="record-photo" aria-hidden="true" /><div className="record-shade" aria-hidden="true" /><div className="record-content"><p className="section-kicker">Major achievement · 27 November 2020</p><p className="record-number">165.032 <span>metres</span></p><h2>Associated with a Guinness World Records controlled-demolition achievement.</h2><p>PMTE was associated with Modon Properties on the controlled demolition of a 165.032-metre building in Abu Dhabi on 27 November 2020. This statement identifies PMTE as an associated contractor and does not imply that PMTE was the sole record holder.</p></div></section>
+      <section className="record-section print-page" id="achievement"><div className="record-photo" aria-hidden="true" /><div className="record-shade" aria-hidden="true" /><div className="record-content"><p className="section-kicker">Major achievement · 27 November 2020</p><p className="record-number">165.032 <span>metres</span></p><h2>Associated with a Guinness World Records controlled-demolition achievement.</h2><p>PMTE was associated with Modon Properties on the controlled demolition of a 165.032-metre building in Abu Dhabi on 27 November 2020. This statement identifies PMTE as an associated contractor and does not imply that PMTE was the sole record holder.</p><a className="record-certificate" href="/assets/certificates/guinness-world-records-certificate.jpeg" target="_blank" rel="noreferrer"><img src="/assets/certificates/guinness-world-records-certificate.jpeg" alt="Guinness World Records certificate naming Modon Properties in association with Petroleum Machinery and Technical Equipment" /><span>View certificate</span></a></div></section>
 
       <section className="fleet-section section-shell print-page" id="fleet">
         <div className="section-index">04 · Fleet & equipment</div>
@@ -108,7 +120,7 @@ export default function Home() {
         <div className="split-heading"><div><p className="section-kicker">Credential register</p><h2>Current status.<br /><span>Clear dates.</span></h2></div><p>Status is shown against the dates in the supplied portfolio and the preparation date of this document. Credentials must be revalidated before every formal submission.</p></div>
         <div className="credential-table-wrap"><table className="credential-table"><thead><tr><th>Credential</th><th>Issue date</th><th>Expiry date</th><th>Status</th></tr></thead><tbody>{credentials.map((row) => <tr key={row.name}><td data-label="Credential">{row.name}</td><td data-label="Issue date">{row.issue}</td><td data-label="Expiry date">{row.expiry}</td><td data-label="Status"><span className={`status ${row.tone}`}>{row.status}</span></td></tr>)}</tbody></table></div>
         <div className="submission-alert"><strong>Submission control</strong><p>The Environment Agency NOC shown in the source material expires on 07 September 2026 and should be treated as approaching expiry. Confirm renewal and revalidate every credential before tender or prequalification submission.</p></div>
-        <details className="credential-appendix" open><summary>Appendix · regulatory reference numbers</summary><div className="appendix-grid"><p><span>Economic licence</span>CN-1026538</p><p><span>Chamber membership</span>12700</p><p><span>Waste-management permit</span>PMT-26-20659</p><p><span>Engineering classification</span>D12-2026-1026538-LR1</p><p><span>Unified licence</span>501-1994-100012220</p><p><span>Unified registration</span>101-2021-100053155</p><p><span>Commercial registry</span>6586082</p><p><span>Paid capital</span>AED 100,000</p></div></details>
+        <details className="credential-appendix" open><summary>Appendix · regulatory reference numbers</summary><div className="appendix-grid"><p><span>Economic licence</span>CN-1026538</p><p><span>Chamber membership</span>12700</p><p><span>Waste-management permit</span>PMT-26-20659</p><p><span>Engineering classification</span>D12-2026-1026538-LR1</p><p><span>Unified licence</span>501-1994-100012220</p><p><span>Unified registration</span>101-2021-100053155</p><p><span>Commercial registry</span>6586082</p><p><span>Paid capital</span>AED 100,000</p></div></details><div className="certificate-library"><div><p className="section-kicker">Shared document library</p><h3>Certificate previews.</h3><p>Open the supplied OneDrive folders to preview the current document copies. Revalidate every item before a formal submission.</p></div><div className="certificate-list">{certificateLibrary.map((certificate) => <a key={certificate} href={certificateFolder} target="_blank" rel="noreferrer"><span>PDF</span>{certificate}<b>View ↗</b></a>)}<a href={supportingCertificateFolder} target="_blank" rel="noreferrer"><span>Folder</span>Supporting certificate documents<b>Open ↗</b></a></div></div>
       </section>
 
       <section className="leadership-section print-page" id="leadership"><div className="section-shell leadership-grid"><div><div className="section-index light">07 · Leadership & company details</div><p className="section-kicker">Accountable management</p><h2>Abu Dhabi<br /><span>owned and managed.</span></h2></div><div className="leadership-card"><span>Owner & manager</span><h3>Jasem Ahmed Abdulla Almale Almarzooqi</h3><dl><div><dt>Legal form</dt><dd>Limited Liability Company · Single Person Company (L.L.C. - S.P.C.)</dd></div><div><dt>Legal name</dt><dd>Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C.</dd></div><div><dt>Established</dt><dd>19 January 1994</dd></div><div><dt>Head office</dt><dd>Musaffah, Abu Dhabi, UAE</dd></div></dl><p className="privacy-line">Private identity numbers, passport details, signatures and QR codes are intentionally excluded from this public portfolio.</p></div></div></section>
