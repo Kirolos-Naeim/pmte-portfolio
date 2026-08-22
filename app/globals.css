@@ -104,11 +104,13 @@ p { text-wrap: pretty; }
   border-bottom: 1px solid rgba(255,255,255,.2);
 }
 .brand img { width: min(310px, 25vw); height: auto; }
+.brand .pmte-logo { width: min(275px, 24vw); max-height: 72px; object-fit: contain; object-position: left center; }
 .site-header nav { display: flex; gap: 31px; font-size: 12px; letter-spacing: .04em; }
 .site-header nav a { transition: color .2s ease; }
 .site-header nav a:hover { color: var(--red); }
 .route-header { display: grid; grid-template-columns: minmax(250px, 1fr) auto minmax(170px, 1fr); align-items: center; gap: 28px; min-height: 116px; padding: 18px clamp(24px, 5vw, 76px); background: var(--ink); color: white; }
 .route-header .brand img { width: min(310px, 25vw); height: auto; }
+.route-header .brand .pmte-logo { width: min(275px, 24vw); max-height: 72px; }
 .route-header nav { display: flex; gap: 25px; font-size: 12px; letter-spacing: .04em; }
 .route-header nav a:hover, .route-header nav a[aria-current="page"] { color: var(--red); }
 .route-header .header-contact { justify-self: end; }
@@ -127,7 +129,8 @@ h1 span { color: #c9cdd2; }
 .primary-action { display: inline-flex; align-items: center; gap: 24px; padding: 17px 21px; background: var(--red); font-size: 10px; font-weight: 780; letter-spacing: .1em; text-transform: uppercase; transition: background .2s ease, transform .2s ease; }
 .primary-action:hover { background: #b80f16; transform: translateY(-2px); }
 .primary-action span { font-size: 18px; }
-.action-icon { display: inline-grid; width: 1.25em; height: 1.25em; place-items: center; border: 1px solid currentColor; font-family: Arial, sans-serif; font-size: .95em !important; font-weight: 700; line-height: 1; }
+.action-icon { display: inline-grid; width: 1.35em; height: 1.35em; place-items: center; vertical-align: -0.22em; }
+.action-icon img { display: block; width: 100%; height: 100%; object-fit: contain; filter: brightness(0) saturate(100%) invert(13%) sepia(93%) saturate(3314%) hue-rotate(345deg) brightness(87%) contrast(102%); }
 .text-action { font-size: 10px; font-weight: 760; letter-spacing: .12em; text-transform: uppercase; }
 .text-action span { margin-left: 10px; color: var(--red); }
 .hero-stats { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); width: min(980px, 78%); margin-left: auto; border-top: 1px solid rgba(255,255,255,.2); background: rgba(21,21,21,.89); backdrop-filter: blur(10px); }
@@ -179,13 +182,15 @@ h1 span { color: #c9cdd2; }
 .client-card { display: flex; align-items: center; justify-content: center; min-height: 144px; padding: 25px; background: #202020; }
 .client-card img { width: 100%; max-width: 180px; max-height: 78px; object-fit: contain; }
 .record-section { position: relative; display: flex; align-items: center; min-height: 790px; overflow: hidden; background: var(--ink); color: white; }
-.record-photo { position: absolute; inset: 0; background: url('/assets/projects/gallery-028-p24-01.jpg') center / cover no-repeat; filter: grayscale(.25) contrast(1.08); }
+.record-photo { position: absolute; inset: 0; background: url('/assets/projects/mina-plaza-aerial-before-demolition.jpg') center 54% / cover no-repeat; filter: grayscale(.18) contrast(1.08) saturate(.88); }
 .record-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,21,21,.98) 0%, rgba(21,21,21,.89) 52%, rgba(21,21,21,.35) 100%); }
 .record-content { position: relative; z-index: 1; width: min(980px, 78%); padding: 110px clamp(24px, 8vw, 126px); }
 .record-number { margin: 0; color: var(--red); font-size: clamp(66px, 9vw, 140px); font-weight: 640; letter-spacing: -.08em; line-height: .85; }
 .record-number span { margin-left: 8px; color: white; font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
 .record-content h2 { max-width: 880px; margin: 35px 0 22px; font-size: clamp(35px, 4vw, 62px); font-weight: 580; letter-spacing: -.05em; line-height: .98; text-transform: uppercase; }
 .record-content > p:last-child { max-width: 750px; margin: 0; color: #ccd0d4; font-size: 15px; line-height: 1.72; }
+.record-evidence-link { display: inline-flex; gap: 10px; align-items: center; margin-top: 30px; padding-bottom: 7px; border-bottom: 2px solid var(--red); color: white; font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.record-evidence-link span { color: var(--red); font-size: 16px; line-height: 0; }
 .record-certificate { position: absolute; top: 110px; right: 0; display: block; width: min(235px, 23vw); overflow: hidden; border: 1px solid rgba(255,255,255,.35); background: #171717; box-shadow: 0 18px 40px rgba(0,0,0,.28); }
 .record-certificate img { display: block; width: 100%; aspect-ratio: .69 / 1; object-fit: cover; object-position: top; }
 .record-certificate span { display: block; padding: 11px 13px; border-top: 2px solid var(--red); color: white; font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -226,13 +231,29 @@ h1 span { color: #c9cdd2; }
 .status.warning { color: var(--red); background: #fff4f4; }
 .submission-alert { display: grid; grid-template-columns: 190px 1fr; gap: 28px; margin-top: 20px; padding: 23px; border: 1px solid #edb9bb; background: #fff7f7; }
 .certificate-library { display: grid; grid-template-columns: minmax(240px, .75fr) minmax(0, 1.25fr); gap: 55px; margin-top: 62px; padding-top: 54px; border-top: 1px solid var(--line); }
+.certificate-highlight { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 34px; align-items: stretch; margin-top: 42px; padding: 18px; border: 1px solid var(--line); background: var(--ink); color: white; }
+.certificate-highlight { width: 100%; text-align: left; cursor: pointer; }
+.certificate-highlight img { width: 100%; height: 360px; object-fit: contain; object-position: center; background: #202020; }
+.certificate-highlight > div { display: flex; flex-direction: column; justify-content: center; padding: 8px 20px 8px 0; }
+.certificate-highlight .section-kicker { color: var(--red); }
+.certificate-highlight h3 { margin: 8px 0 14px; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.02; letter-spacing: -.04em; }
+.certificate-highlight p:not(.section-kicker) { max-width: 680px; margin: 0; color: #c9ced4; font-size: 13px; line-height: 1.6; }
+.certificate-highlight > div > span { display: inline-block; margin-top: 20px; color: white; font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .certificate-library h3 { margin: 0 0 15px; font-size: 28px; font-weight: 600; letter-spacing: -.045em; text-transform: uppercase; }
 .certificate-library > div > p:last-child { max-width: 410px; margin: 0; color: var(--steel); font-size: 13px; line-height: 1.7; }
 .certificate-list { border-top: 1px solid var(--line); }
-.certificate-list a { display: grid; grid-template-columns: 64px 1fr auto; gap: 16px; align-items: center; min-height: 52px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 12px; font-weight: 600; }
-.certificate-list a:hover { color: var(--red); }
+.certificate-list button { display: grid; width: 100%; grid-template-columns: 64px 1fr auto; gap: 16px; align-items: center; min-height: 52px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; font: inherit; font-size: 12px; font-weight: 600; text-align: left; }
+.certificate-list button:hover { color: var(--red); }
 .certificate-list span { color: var(--red); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .12em; }
 .certificate-list b { color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+.certificate-modal { position: fixed; z-index: 20; inset: 0; display: grid; place-items: center; padding: 28px; background: rgba(10,10,10,.82); }
+.certificate-modal section { display: grid; grid-template-rows: auto minmax(0, 1fr); width: min(860px, 100%); height: min(720px, 84vh); overflow: hidden; background: white; box-shadow: 0 28px 72px rgba(0,0,0,.45); }
+.certificate-modal header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; background: var(--ink); color: white; }
+.certificate-modal header span { color: var(--red); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.certificate-modal h3 { margin: 5px 0 0; font-size: 18px; letter-spacing: -.025em; }
+.certificate-modal header button { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(255,255,255,.45); background: transparent; color: white; cursor: pointer; font-size: 24px; line-height: 1; }
+.certificate-modal iframe { width: 100%; height: 100%; border: 0; background: #f3f4f6; }
+.certificate-modal > section > img { width: 100%; height: 100%; object-fit: contain; background: #202020; }
 .submission-alert strong { color: var(--red); font-size: 12px; text-transform: uppercase; }
 .submission-alert p { margin: 0; color: #5b5151; font-size: 12px; line-height: 1.65; }
 .credential-appendix { margin-top: 31px; border: 1px solid var(--line); }
@@ -297,10 +318,13 @@ h1 span { color: #c9cdd2; }
 .contact-grid .map-card { grid-column: span 2; min-height: 300px; padding: 0; overflow: hidden; background: #2b2b2b; }
 .map-card iframe { display: block; width: 100%; height: 100%; min-height: 300px; border: 0; filter: grayscale(.35) contrast(1.05); }
 .contact-grid .placeholder p { color: #8f969e; font-style: italic; }
-.contact-section footer { display: grid; grid-template-columns: minmax(220px, 1fr) 1.35fr 1.2fr auto; align-items: center; gap: 30px; padding: 28px clamp(24px, 5vw, 76px); border-top: 1px solid var(--soft-line); color: #9da3aa; font-size: 9px; }
+.contact-section footer { display: grid; grid-template-columns: minmax(190px, 1fr) 1.2fr 1.1fr 1.35fr auto; align-items: center; gap: 20px; padding: 28px clamp(24px, 5vw, 76px); border-top: 1px solid var(--soft-line); color: #9da3aa; font-size: 9px; }
 .contact-section footer img { width: min(250px, 22vw); }
+.contact-section footer .pmte-logo { width: min(235px, 22vw); max-height: 74px; object-fit: contain; object-position: left center; }
 .contact-section footer p { margin: 0; line-height: 1.5; }
 .contact-section footer a { color: white; font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .09em; text-transform: uppercase; }
+.contact-section footer .icon-credit { font-size: 8px; line-height: 1.55; }
+.contact-section footer .icon-credit a { color: #c9ced4; font-family: inherit; font-size: inherit; letter-spacing: normal; text-transform: none; text-decoration: underline; }
 
 @media (max-width: 1120px) {
   .site-header { grid-template-columns: 1fr auto; }
@@ -357,7 +381,12 @@ h1 span { color: #c9cdd2; }
   .credential-table td::before { content: attr(data-label); color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
   .submission-alert { grid-template-columns: 1fr; }
   .certificate-library { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; padding-top: 42px; }
-  .certificate-list a { grid-template-columns: 50px 1fr auto; gap: 9px; }
+  .certificate-highlight { grid-template-columns: 1fr; gap: 20px; padding: 14px; }
+  .certificate-highlight img { height: auto; max-height: 280px; object-fit: contain; background: #202020; }
+  .certificate-highlight > div { padding: 0 6px 8px; }
+  .certificate-list button { grid-template-columns: 50px 1fr auto; gap: 9px; }
+  .certificate-modal { padding: 12px; }
+  .certificate-modal section { height: 94vh; }
   .leadership-card { padding: 24px; }
   .leadership-card dl div { grid-template-columns: 95px 1fr; }
   .gallery-toolbar { align-items: flex-start; flex-direction: column; }
@@ -390,7 +419,7 @@ h1 span { color: #c9cdd2; }
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   html { scroll-behavior: auto; }
   body { background: white; color: #151515; font-size: 9pt; }
-  .site-header nav, .header-contact, .hero-actions, .document-link, .gallery-toolbar, .gallery-open, .lightbox, footer a { display: none !important; }
+  .site-header nav, .header-contact, .hero-actions, .document-link, .gallery-toolbar, .gallery-open, .lightbox, .certificate-modal, footer a { display: none !important; }
   .record-certificate { display: none; }
   .print-cover { min-height: 273mm; height: 273mm; break-after: page; page-break-after: always; }
   .site-header { grid-template-columns: 1fr; padding: 8mm 10mm; }
