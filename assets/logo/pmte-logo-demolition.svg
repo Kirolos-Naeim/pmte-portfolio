@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">PMTE demolition logo</title>
+  <desc id="desc">A tracked excavator with a hydraulic breaker beside the PMTE wordmark.</desc>
+  <defs>
+    <style>
+      .navy{fill:#172B4D}.steel{fill:#667085}.red{fill:#D71920}.white{fill:#FFFFFF}.line{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <!-- demolition emblem -->
+  <g transform="translate(16 22)">
+    <path class="steel" d="M8 198h226l-18 18H26z"/>
+    <path class="navy" d="M30 174h166l30 24H18z"/>
+    <rect class="navy" x="42" y="142" width="142" height="37" rx="15"/>
+    <circle class="steel" cx="68" cy="179" r="25"/><circle class="steel" cx="160" cy="179" r="25"/>
+    <circle class="navy" cx="68" cy="179" r="11"/><circle class="navy" cx="160" cy="179" r="11"/>
+    <path class="navy" d="M54 141V99l31-29h70l30 34v37z"/>
+    <path class="steel" d="M91 88h58l19 20v29H91z"/>
+    <path class="line" stroke="#FFFFFF" stroke-width="5" d="M100 95h39l12 13v22h-51z"/>
+    <path class="navy" d="M63 101 76 45l22-18 14 13-16 57z"/>
+    <path class="navy" d="M91 48 152 29l9 18-65 32z"/>
+    <path class="navy" d="M150 31 184 45l35 35-15 14-39-26z"/>
+    <path class="red" d="M69 105 81 48l10-9 11 10-15 59z"/>
+    <path class="red" d="M201 82h23l16 22-13 12-25-21z"/>
+    <path class="red" d="M226 105h17v49h-17z"/>
+    <path class="steel" d="M218 150h33l-8 11h-25z"/>
+    <path class="line" stroke="#D71920" stroke-width="7" d="M245 155v28"/>
+    <path class="line" stroke="#FFFFFF" stroke-width="5" d="M245 183v18"/>
+    <path class="steel" d="M250 201h-11l5 12h11z"/>
+    <!-- broken wall -->
+    <path class="white" d="M255 84h27v116h-39l12-19z" opacity=".9"/>
+    <path class="navy" d="m255 111 27-14v17l-27 14zm0 35 27-12v16l-27 14z"/>
+    <path class="red" d="m252 90 16 7-16 9z"/>
+    <circle class="red" cx="250" cy="73" r="5"/><circle class="steel" cx="277" cy="63" r="4"/>
+  </g>
+  <!-- retained wordmark lockup -->
+  <g transform="translate(330 30)">
+    <text x="0" y="86" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="92" font-style="italic" font-weight="900" letter-spacing="-5">PMT</text>
+    <text x="202" y="86" fill="#D71920" font-family="Arial,Helvetica,sans-serif" font-size="92" font-style="italic" font-weight="900" letter-spacing="-5">E</text>
+    <rect x="0" y="111" width="828" height="6" fill="#D71920"/>
+    <text x="0" y="163" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" letter-spacing="1.2">PETROLEUM MACHINERY</text>
+    <text x="0" y="204" fill="#B8C0CC" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="500" letter-spacing="1.5">&amp; TECHNICAL EQUIPMENT</text>
+  </g>
+</svg>
