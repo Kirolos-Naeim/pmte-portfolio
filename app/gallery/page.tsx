@@ -1,0 +1,5 @@
+import { Gallery } from "../Gallery";
+
+export default function GalleryPage() {
+  return <main className="route-page"><header className="route-header"><a className="brand" href="/" aria-label="PMTE home"><img src="/assets/logo/pmte-charcoal-logo-transparent.png" alt="PMTE — Petroleum Machinery and Technical Equipment" /></a><nav aria-label="Primary navigation"><a href="/about">About</a><a href="/#services">Capabilities</a><a href="/#projects">Projects</a><a href="/gallery" aria-current="page">Gallery</a><a href="/#credentials">Credentials</a></nav><a className="header-contact" href="/#contact">Company details</a></header><section className="gallery-section section-shell route-intro"><div className="section-index">Project gallery</div><div className="split-heading"><div><p className="section-kicker">Supplied field archive</p><h1>Evidence from<br /><span>the field.</span></h1></div><p>All 73 project photographs extracted from the supplied company portfolio are included. Multi-image source pages are represented as individual gallery records where available.</p></div><Gallery /></section></main>;
+}

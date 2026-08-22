@@ -1,5 +1,3 @@
-import { Gallery } from "./Gallery";
-
 const capabilities = [
   { code: "01", title: "Demolition & Decommissioning", copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
   { code: "02", title: "Excavation & Earthworks", copy: "Bulk excavation, cut-and-fill, site grading, foundation excavation, ground clearing and preparation." },
@@ -37,6 +35,17 @@ const credentials = [
   { name: "Engineering classification", issue: "11 Jun 2026", expiry: "15 Jan 2028", status: "Current", tone: "current" },
 ];
 
+const clients = [
+  { name: "Sheikh Shakhbout Medical City", image: "/assets/clients/SSMC_logo_abu_dhabi.svg" },
+  { name: "PureHealth", image: "/assets/clients/PureHealth_logo.png" },
+  { name: "Abu Dhabi Media", image: "/assets/clients/abu-dhabi-media.png" },
+  { name: "Aldar", image: "/assets/clients/aldar.png" },
+  { name: "Abu Dhabi Investment Office", image: "/assets/clients/adio.png" },
+  { name: "Eagle Hills", image: "/assets/clients/EagelHills.png" },
+  { name: "Finance House", image: "/assets/clients/finance_ouse.png" },
+  { name: "Modon", image: "/assets/clients/modon.png" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -44,8 +53,8 @@ export default function Home() {
         <div className="hero-photo" aria-hidden="true" />
         <div className="hero-shade" aria-hidden="true" />
         <header className="site-header">
-          <a className="brand" href="#home" aria-label="PMTE home"><img src="/assets/logo/pmte-logo-horizontal-white.png" alt="PMTE — Petroleum Machinery and Technical Equipment" /></a>
-          <nav aria-label="Primary navigation"><a href="#about">Overview</a><a href="#services">Capabilities</a><a href="#projects">Projects</a><a href="#credentials">Credentials</a></nav>
+          <a className="brand" href="#home" aria-label="PMTE home"><img src="/assets/logo/pmte-charcoal-logo-transparent.png" alt="PMTE — Petroleum Machinery and Technical Equipment" /></a>
+          <nav aria-label="Primary navigation"><a href="/about">About</a><a href="#services">Capabilities</a><a href="#projects">Projects</a><a href="/gallery">Gallery</a><a href="#credentials">Credentials</a></nav>
           <a className="header-contact" href="#contact">Company details</a>
         </header>
         <div className="hero-content">
@@ -53,26 +62,10 @@ export default function Home() {
           <p className="eyebrow"><span /> Established 1994 · Abu Dhabi, UAE</p>
           <h1>Demolition.<br /><span>Built on control.</span></h1>
           <p className="hero-copy">Demolition, Earthworks, Marine Works and Industrial Support Solutions</p>
-          <div className="hero-actions"><a className="primary-action" href="#projects">View project experience <span>↘</span></a><a className="text-action" href="#about">Company overview <span>↓</span></a></div>
+          <div className="hero-actions"><a className="primary-action" href="#projects">View project experience <span>↘</span></a><a className="text-action" href="/about">Company overview <span>→</span></a></div>
         </div>
         <div className="hero-stats" aria-label="Company highlights">
           <div><strong>1994</strong><span>Established</span></div><div><strong>30+</strong><span>Years of operation</span></div><div><strong>8</strong><span>Licensed activities</span></div><div><strong>25+</strong><span>Fleet recorded in source profile</span></div>
-        </div>
-      </section>
-
-      <section className="overview-section section-shell print-page" id="about">
-        <div className="section-index">01 · Company overview</div>
-        <div className="overview-grid">
-          <div className="section-title"><p className="section-kicker">Abu Dhabi · Since 1994</p><h2>Three decades of<br /><span>field capability.</span></h2></div>
-          <div className="overview-copy">
-            <p className="lead">Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C. (PMTE) is an Abu Dhabi contractor supporting complex demolition, earthworks, marine and industrial assignments.</p>
-            <p>Established on 19 January 1994, the company has documented experience with government and private-sector clients across exhibition facilities, urban redevelopment, waterfront environments, education assets and regional site works.</p>
-            <p>PMTE combines practical site teams, project-specific machinery and coordinated transport support to deliver defined scopes safely and methodically.</p>
-            <a className="document-link" href="/PMTE-Company-Portfolio-2026.pdf" download>Download A4 company portfolio <span>PDF ↓</span></a>
-          </div>
-        </div>
-        <div className="fact-grid" aria-label="Company statistics">
-          <article><strong>1994</strong><span>Establishment year</span></article><article><strong>Public + private</strong><span>Project sectors</span></article><article><strong>8</strong><span>Licensed activities</span></article><article><strong>25+</strong><span>Vehicles and machines recorded in the source profile</span></article>
         </div>
       </section>
 
@@ -87,6 +80,12 @@ export default function Home() {
         <div className="split-heading"><div><p className="section-kicker">Selected experience</p><h2>Documented work.<br /><span>Defined scope.</span></h2></div><p>Project names and scopes reflect the supplied company portfolio. No contract values, completion percentages or performance metrics have been added.</p></div>
         <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><img src={project.image} alt={`${project.title} project photograph`} loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>{project.sector}</p><h3>{project.title}</h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
       </section>
+
+      <section className="clients-section" id="clients"><div className="section-shell">
+        <div className="section-index light">04 · Selected client experience</div>
+        <div className="split-heading light-heading"><div><p className="section-kicker">Past client portfolio</p><h2>Trusted across<br /><span>Abu Dhabi.</span></h2></div><p>Organisations supplied by PMTE as past client and project-experience references. Engagement details remain project-specific and confidential.</p></div>
+        <div className="client-grid">{clients.map((client) => <article className="client-card" key={client.name}><img src={client.image} alt={`${client.name} logo`} loading="lazy" /></article>)}</div>
+      </div></section>
 
       <section className="record-section print-page" id="achievement"><div className="record-photo" aria-hidden="true" /><div className="record-shade" aria-hidden="true" /><div className="record-content"><p className="section-kicker">Major achievement · 27 November 2020</p><p className="record-number">165.032 <span>metres</span></p><h2>Associated with a Guinness World Records controlled-demolition achievement.</h2><p>PMTE was associated with Modon Properties on the controlled demolition of a 165.032-metre building in Abu Dhabi on 27 November 2020. This statement identifies PMTE as an associated contractor and does not imply that PMTE was the sole record holder.</p></div></section>
 
@@ -114,13 +113,7 @@ export default function Home() {
 
       <section className="leadership-section print-page" id="leadership"><div className="section-shell leadership-grid"><div><div className="section-index light">07 · Leadership & company details</div><p className="section-kicker">Accountable management</p><h2>Abu Dhabi<br /><span>owned and managed.</span></h2></div><div className="leadership-card"><span>Owner & manager</span><h3>Jasem Ahmed Abdulla Almale Almarzooqi</h3><dl><div><dt>Legal form</dt><dd>Limited Liability Company · Single Person Company (L.L.C. - S.P.C.)</dd></div><div><dt>Legal name</dt><dd>Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C.</dd></div><div><dt>Established</dt><dd>19 January 1994</dd></div><div><dt>Head office</dt><dd>Musaffah, Abu Dhabi, UAE</dd></div></dl><p className="privacy-line">Private identity numbers, passport details, signatures and QR codes are intentionally excluded from this public portfolio.</p></div></div></section>
 
-      <section className="gallery-section section-shell print-page" id="gallery">
-        <div className="section-index">08 · Project gallery</div>
-        <div className="split-heading"><div><p className="section-kicker">Supplied field archive</p><h2>Evidence from<br /><span>the field.</span></h2></div><p>All 73 project photographs extracted from the supplied company portfolio are included. Multi-image source pages are represented as individual gallery records where available.</p></div>
-        <Gallery />
-      </section>
-
-      <section className="contact-section print-page" id="contact"><div className="contact-inner"><div className="contact-heading"><p className="section-kicker">Petroleum Machinery and Technical Equipment</p><h2>Discuss your<br /><span>project scope.</span></h2><p>Demolition · Earthworks · Marine Works · Industrial Support</p></div><div className="contact-grid"><article><span>Telephone</span><a href="tel:+97126337709">+971 2 633 7709</a><a href="tel:+97126756339">+971 2 675 6339</a></article><article><span>Mobile</span><a href="tel:+971508134134">+971 50 813 4134</a></article><article><span>Current email</span><a href="mailto:petrolum@emirates.net.ae">petrolum@emirates.net.ae</a><a href="mailto:petrloum_mach@yahoo.com">petrloum_mach@yahoo.com</a></article><article><span>Address</span><p>Musaffah, Abu Dhabi, UAE<br />P.O. Box 2543</p></article><article className="placeholder"><span>Website</span><p>To be confirmed</p></article><article className="placeholder"><span>Company-domain email</span><p>To be confirmed</p></article></div></div><footer><img src="/assets/logo/pmte-logo-horizontal-white.png" alt="PMTE" /><p>Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C.</p><p>Portfolio prepared 15 August 2026 · Revalidate credentials before submission.</p><a href="#home">Back to top ↑</a></footer></section>
+      <section className="contact-section print-page" id="contact"><div className="contact-inner"><div className="contact-heading"><p className="section-kicker">Petroleum Machinery and Technical Equipment</p><h2>Discuss your<br /><span>project scope.</span></h2><p>Demolition · Earthworks · Marine Works · Industrial Support</p></div><div className="contact-grid"><article><span>Telephone</span><a href="tel:+97126337709">+971 2 633 7709</a><a href="tel:+97126756339">+971 2 675 6339</a></article><article><span>Mobile</span><a href="tel:+971508134134">+971 50 813 4134</a></article><article><span>Current email</span><a href="mailto:petrolum@emirates.net.ae">petrolum@emirates.net.ae</a><a href="mailto:petrloum_mach@yahoo.com">petrloum_mach@yahoo.com</a></article><article><span>Address</span><p>Musaffah, Abu Dhabi, UAE<br />P.O. Box 2543</p></article><article className="placeholder"><span>Website</span><p>To be confirmed</p></article><article className="placeholder"><span>Company-domain email</span><p>To be confirmed</p></article></div></div><footer><img src="/assets/logo/pmte-charcoal-logo-transparent.png" alt="PMTE" /><p>Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C.</p><p>Portfolio prepared 15 August 2026 · Revalidate credentials before submission.</p><a href="#home">Back to top ↑</a></footer></section>
     </main>
   );
 }
