@@ -2,6 +2,7 @@ import { Drill, Fuel, Hammer, PackageSearch, Tractor, Truck, Waves, Wrench } fro
 import { MotionEffects } from "./MotionEffects";
 import { StickyNav } from "./StickyNav";
 import { CertificateLibrary } from "./CertificateLibrary";
+import { StatsValue } from "./StatsValue";
 
 const capabilities = [
   { code: "01", title: "Demolition & Decommissioning", Icon: Hammer, copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
@@ -84,7 +85,7 @@ export default function Home() {
           <div className="hero-actions"><a className="primary-action" href="#projects">View project experience <span className="action-icon" aria-hidden="true"><img src="https://cdn-icons-png.flaticon.com/512/4257/4257459.png" alt="" /></span></a><a className="text-action" href="/about">Company overview <span>→</span></a></div>
         </div>
         <div className="hero-stats" aria-label="Company highlights">
-          <div><strong>1994</strong><span>Established</span></div><div><strong>30+</strong><span>Years of operation</span></div><div><strong>8</strong><span>Licensed activities</span></div><div><strong>25+</strong><span>Fleet recorded in source profile</span></div>
+          <div><StatsValue value="1994" /><span className="stat-label">Established</span></div><div><StatsValue value="30+" /><span className="stat-label">Years of operation</span></div><div><StatsValue value="8" /><span className="stat-label">Licensed activities</span></div><div><StatsValue value="25+" /><span className="stat-label">Fleet recorded in source profile</span></div>
         </div>
       </section>
 
