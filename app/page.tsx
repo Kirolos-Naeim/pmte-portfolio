@@ -1,12 +1,17 @@
+import { Drill, Fuel, Hammer, PackageSearch, Tractor, Truck, Waves, Wrench } from "lucide-react";
+import { MotionEffects } from "./MotionEffects";
+import { StickyNav } from "./StickyNav";
+import { CertificateLibrary } from "./CertificateLibrary";
+
 const capabilities = [
-  { code: "01", title: "Demolition & Decommissioning", copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
-  { code: "02", title: "Excavation & Earthworks", copy: "Bulk excavation, cut-and-fill, site grading, foundation excavation, ground clearing and preparation." },
-  { code: "03", title: "Marine Works", copy: "Harbour and shoreline support, underwater concrete-block removal, rock arrangement and specialist waterfront operations." },
-  { code: "04", title: "Concrete & Asphalt Removal", copy: "Concrete cutting, structural sawing, asphalt removal and controlled breaking for precise alteration and clearance work." },
-  { code: "05", title: "Waste Transportation", copy: "Construction-waste transport, debris clearing, organic-waste transport and coordinated haulage to approved facilities." },
-  { code: "06", title: "Metal Construction", copy: "Metal construction contracting and practical site support aligned with approved project requirements." },
-  { code: "07", title: "Oil & Gas Field Services", copy: "Support services for onshore and offshore fields, installations and facilities within the company’s licensed activity scope." },
-  { code: "08", title: "Equipment & Technical Supply", copy: "Oilfield equipment, devices, spare parts, barriers, e-gates and related technical-supply support." },
+  { code: "01", title: "Demolition & Decommissioning", Icon: Hammer, copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
+  { code: "02", title: "Excavation & Earthworks", Icon: Tractor, copy: "Bulk excavation, cut-and-fill, site grading, foundation excavation, ground clearing and preparation." },
+  { code: "03", title: "Marine Works", Icon: Waves, copy: "Harbour and shoreline support, underwater concrete-block removal, rock arrangement and specialist waterfront operations." },
+  { code: "04", title: "Concrete & Asphalt Removal", Icon: Drill, copy: "Concrete cutting, structural sawing, asphalt removal and controlled breaking for precise alteration and clearance work." },
+  { code: "05", title: "Waste Transportation", Icon: Truck, copy: "Construction-waste transport, debris clearing, organic-waste transport and coordinated haulage to approved facilities." },
+  { code: "06", title: "Metal Construction", Icon: Wrench, copy: "Metal construction contracting and practical site support aligned with approved project requirements." },
+  { code: "07", title: "Oil & Gas Field Services", Icon: Fuel, copy: "Support services for onshore and offshore fields, installations and facilities within the company’s licensed activity scope." },
+  { code: "08", title: "Equipment & Technical Supply", Icon: PackageSearch, copy: "Oilfield equipment, devices, spare parts, barriers, e-gates and related technical-supply support." },
 ];
 
 const projects = [
@@ -61,6 +66,8 @@ const guinnessEmbedImage = "https://1drv.ms/i/c/2cea8bedd36ce876/IQQhnohx_Wi2S5S
 export default function Home() {
   return (
     <main>
+      <StickyNav />
+      <MotionEffects />
       <section className="hero print-cover" id="home">
         <div className="hero-photo" aria-hidden="true" />
         <div className="hero-shade" aria-hidden="true" />
@@ -84,7 +91,7 @@ export default function Home() {
       <section className="capabilities-section print-page" id="services"><div className="section-shell">
         <div className="section-index light">02 · Core capabilities</div>
         <div className="split-heading light-heading"><div><p className="section-kicker">Integrated site support</p><h2>One accountable<br /><span>field partner.</span></h2></div><p>Licensed activities and documented delivery experience organised around demanding UAE construction, demolition and waterfront environments.</p></div>
-        <div className="capability-grid">{capabilities.map((item) => <article className="capability-card" key={item.code}><span className="capability-code">{item.code}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div>
+        <div className="capability-grid">{capabilities.map((item) => <article className="capability-card" key={item.code}><span className="capability-code">{item.code}</span><item.Icon className="capability-icon" aria-hidden="true" /><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div>
       </div></section>
 
       <section className="projects-section section-shell print-page" id="projects">
@@ -129,4 +136,3 @@ export default function Home() {
     </main>
   );
 }
-import { CertificateLibrary } from "./CertificateLibrary";
