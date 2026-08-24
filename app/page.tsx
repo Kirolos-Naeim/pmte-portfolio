@@ -119,7 +119,6 @@ export default function Home() {
         <div className="section-index light">05 · HSE & quality</div>
         <div className="split-heading light-heading"><div><p className="section-kicker">Three operating pillars</p><h2>Control risk.<br /><span>Protect outcomes.</span></h2></div><p>The source portfolio documents policies covering health and safety, environmental responsibility and quality management.</p></div>
         <div className="pillar-grid"><article><div className="pillar-icon">S</div><span>01</span><h3>Health & Safety</h3><p>Plan activities, supervise field work, maintain equipment integrity and reinforce responsibility for people and the public.</p></article><article><div className="pillar-icon">E</div><span>02</span><h3>Environment</h3><p>Control site impacts, prevent pollution and support responsible transport, handling and disposal practices.</p></article><article><div className="pillar-icon">Q</div><span>03</span><h3>Quality</h3><p>Work to agreed scope and specifications through documented controls, coordination and continual improvement.</p></article></div>
-        <p className="historical-note"><strong>Historical evidence only:</strong> the supplied ISO 9001, ISO 45001 and ISO 14001 certificates expired on 24 May 2025. The supplied ICV certificate expired on 24 December 2024. They are not presented as current qualifications.</p>
       </div></section>
 
       <section className="credentials-section section-shell print-page" id="credentials">
