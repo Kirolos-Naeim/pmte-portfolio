@@ -159,6 +159,7 @@ h1 span { color: #c9cdd2; }
 .primary-action:hover { background: #b80f16; transform: translateY(-2px); }
 .primary-action span { font-size: 18px; }
 .action-icon { display: inline-grid; width: 1.35em; height: 1.35em; place-items: center; vertical-align: -0.22em; }
+.action-icon svg { width: 100%; height: 100%; stroke-width: 1.9; }
 .action-icon img { display: block; width: 100%; height: 100%; object-fit: contain; filter: brightness(0) saturate(100%) invert(13%) sepia(93%) saturate(3314%) hue-rotate(345deg) brightness(87%) contrast(102%); }
 .text-action { font-size: 10px; font-weight: 760; letter-spacing: .12em; text-transform: uppercase; }
 .text-action span { margin-left: 10px; color: var(--red); }
@@ -279,7 +280,6 @@ h1 span { color: #c9cdd2; }
 .status { display: inline-flex; padding: 7px 9px; border: 1px solid currentColor; font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 720; letter-spacing: .09em; text-transform: uppercase; white-space: nowrap; }
 .status.current { color: #29634a; }
 .status.warning { color: var(--red); background: #fff4f4; }
-.submission-alert { display: grid; grid-template-columns: 190px 1fr; gap: 28px; margin-top: 20px; padding: 23px; border: 1px solid #edb9bb; background: #fff7f7; }
 .certificate-library { display: grid; grid-template-columns: minmax(240px, .75fr) minmax(0, 1.25fr); gap: 55px; margin-top: 62px; padding-top: 54px; border-top: 1px solid var(--line); }
 .certificate-highlight { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 34px; align-items: stretch; margin-top: 42px; padding: 18px; border: 1px solid var(--line); background: var(--ink); color: white; }
 .certificate-highlight { width: 100%; text-align: left; cursor: pointer; }
@@ -288,24 +288,26 @@ h1 span { color: #c9cdd2; }
 .certificate-highlight .section-kicker { color: var(--red); }
 .certificate-highlight h3 { margin: 8px 0 14px; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.02; letter-spacing: -.04em; }
 .certificate-highlight p:not(.section-kicker) { max-width: 680px; margin: 0; color: #c9ced4; font-size: 13px; line-height: 1.6; }
-.certificate-highlight > div > span { display: inline-block; margin-top: 20px; color: white; font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.certificate-view-icon { display: grid; width: 34px; height: 34px; place-items: center; margin-top: 20px; border: 1px solid rgba(255,255,255,.4); color: white; transition: background .18s ease, transform .18s ease; }
+.certificate-highlight:hover .certificate-view-icon { background: var(--red); transform: translate(3px, -3px); }
+.certificate-view-icon svg { width: 17px; height: 17px; stroke-width: 1.8; }
 .certificate-library h3 { margin: 0 0 15px; font-size: 28px; font-weight: 600; letter-spacing: -.045em; text-transform: uppercase; }
 .certificate-library > div > p:last-child { max-width: 410px; margin: 0; color: var(--steel); font-size: 13px; line-height: 1.7; }
 .certificate-list { border-top: 1px solid var(--line); }
 .certificate-list button { display: grid; width: 100%; grid-template-columns: 64px 1fr auto; gap: 16px; align-items: center; min-height: 52px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; font: inherit; font-size: 12px; font-weight: 600; text-align: left; }
 .certificate-list button:hover { color: var(--red); }
 .certificate-list span { color: var(--red); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .12em; }
-.certificate-list b { color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+.certificate-list b { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid var(--line); color: var(--steel); transition: border-color .18s ease, background .18s ease, color .18s ease; }
+.certificate-list b svg { width: 15px; height: 15px; stroke-width: 1.8; }
+.certificate-list button:hover b { border-color: var(--red); background: var(--red); color: white; }
 .certificate-modal { position: fixed; z-index: 20; inset: 0; display: grid; place-items: center; padding: 28px; background: rgba(10,10,10,.82); }
-.certificate-modal section { display: grid; grid-template-rows: auto minmax(0, 1fr); width: min(860px, 100%); height: min(720px, 84vh); overflow: hidden; background: white; box-shadow: 0 28px 72px rgba(0,0,0,.45); }
+.certificate-modal section { display: grid; grid-template-rows: auto minmax(0, 1fr); width: min(720px, 100%); height: min(620px, 78vh); overflow: hidden; background: white; box-shadow: 0 28px 72px rgba(0,0,0,.45); }
 .certificate-modal header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; background: var(--ink); color: white; }
 .certificate-modal header span { color: var(--red); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .certificate-modal h3 { margin: 5px 0 0; font-size: 18px; letter-spacing: -.025em; }
 .certificate-modal header button { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(255,255,255,.45); background: transparent; color: white; cursor: pointer; font-size: 24px; line-height: 1; }
 .certificate-modal iframe { width: 100%; height: 100%; border: 0; background: #f3f4f6; }
 .certificate-modal > section > img { width: 100%; height: 100%; object-fit: contain; background: #202020; }
-.submission-alert strong { color: var(--red); font-size: 12px; text-transform: uppercase; }
-.submission-alert p { margin: 0; color: #5b5151; font-size: 12px; line-height: 1.65; }
 .credential-appendix { margin-top: 31px; border: 1px solid var(--line); }
 .credential-appendix summary { padding: 18px 20px; cursor: pointer; font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 720; letter-spacing: .11em; text-transform: uppercase; }
 .appendix-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
@@ -443,14 +445,13 @@ h1 span { color: #c9cdd2; }
   .credential-table tr { margin-bottom: 12px; border: 1px solid var(--line); }
   .credential-table td { display: grid; grid-template-columns: 108px 1fr; gap: 14px; padding: 13px 15px; border-right: 0; }
   .credential-table td::before { content: attr(data-label); color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
-  .submission-alert { grid-template-columns: 1fr; }
   .certificate-library { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; padding-top: 42px; }
   .certificate-highlight { grid-template-columns: 1fr; gap: 20px; padding: 14px; }
   .certificate-highlight img { height: auto; max-height: 280px; object-fit: contain; background: #202020; }
   .certificate-highlight > div { padding: 0 6px 8px; }
   .certificate-list button { grid-template-columns: 50px 1fr auto; gap: 9px; }
   .certificate-modal { padding: 12px; }
-  .certificate-modal section { height: 94vh; }
+  .certificate-modal section { width: min(640px, 100%); height: min(620px, 86vh); }
   .leadership-card { padding: 24px; }
   .leadership-card dl div { grid-template-columns: 95px 1fr; }
   .gallery-toolbar { align-items: flex-start; flex-direction: column; }
@@ -552,8 +553,6 @@ h1 span { color: #c9cdd2; }
   .credential-table th, .credential-table td { display: table-cell; width: auto; }
   .credential-table td::before { display: none; content: none; }
   .credential-table th, .credential-table td { padding: 3mm; }
-  .submission-alert { grid-template-columns: 38mm 1fr; margin-top: 4mm; padding: 4mm; }
-  .submission-alert p { font-size: 7pt; }
   .credential-appendix { margin-top: 5mm; }
   .credential-appendix summary { padding: 4mm; }
   .appendix-grid { grid-template-columns: repeat(4, 1fr); }
