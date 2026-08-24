@@ -48,3 +48,8 @@ yarn-error.log*
 /outputs/
 /work/
 tmp/
+/.netlify/
+/.pnpm-store/
+/.turbo/
+/.cache/
+*.tsbuildinfo
