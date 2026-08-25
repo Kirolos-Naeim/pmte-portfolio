@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { ArrowUpRight } from "lucide-react";
 
 type Certificate = {
@@ -41,7 +42,15 @@ export function CertificateLibrary({ certificates, guinnessImage }: { certificat
         <div><p className="section-kicker">Shared document library</p><h3>Certificate previews.</h3><p>Select a certificate to view its supplied OneDrive document inside this website. Revalidate every item before a formal submission.</p></div>
         <div className="certificate-list">{certificates.map((certificate) => <button key={certificate.name} type="button" onClick={() => setSelected(certificate)}><span>PDF</span>{certificate.name}<b aria-label={`Preview ${certificate.name}`}><ArrowUpRight aria-hidden="true" /></b></button>)}</div>
       </div>
-      {selected && <div className="certificate-modal" role="dialog" aria-modal="true" aria-label={selected.name} onClick={() => setSelected(null)}><section onClick={(event) => event.stopPropagation()}><header><div><span>Certificate preview</span><h3>{selected.name}</h3></div><button type="button" onClick={() => setSelected(null)} aria-label="Close certificate preview">×</button></header>{selected.embed ? <iframe src={selected.embed} title={`${selected.name} preview`} frameBorder="0" scrolling="auto" /> : <img src={selected.image} alt={selected.name} />}</section></div>}
+      {selected && createPortal(
+        <div className="certificate-modal" role="dialog" aria-modal="true" aria-label={selected.name} onClick={() => setSelected(null)}>
+          <section onClick={(event) => event.stopPropagation()}>
+            <header><div><span>Certificate preview</span><h3>{selected.name}</h3></div><button type="button" onClick={() => setSelected(null)} aria-label="Close certificate preview">×</button></header>
+            {selected.embed ? <iframe src={selected.embed} title={`${selected.name} preview`} frameBorder="0" scrolling="auto" /> : <img src={selected.image} alt={selected.name} />}
+          </section>
+        </div>,
+        document.body,
+      )}
     </>
   );
 }
