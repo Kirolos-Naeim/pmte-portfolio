@@ -71,11 +71,6 @@ export default function Home() {
       <section className="hero print-cover" id="home">
         <div className="hero-photo" aria-hidden="true" />
         <div className="hero-shade" aria-hidden="true" />
-        <header className="site-header">
-          <a className="brand" href="#home" aria-label="PMTE home"><img className="pmte-logo" src="/assets/logo/pmte-logo-primary.png" alt="PMTE — Petroleum Machinery and Technical Equipment" /></a>
-          <nav aria-label="Primary navigation"><a href="/about">About</a><a href="#services">Capabilities</a><a href="#projects">Projects</a><a href="/gallery">Gallery</a><a href="#credentials">Credentials</a></nav>
-          <a className="header-contact" href="#contact">Company details</a>
-        </header>
         <div className="hero-content">
           <p className="portfolio-tag"><span>Company Portfolio</span><b>2026</b></p>
           <p className="eyebrow"><span /> Established 1994 · Abu Dhabi, UAE</p>
