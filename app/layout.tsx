@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { localBusinessJsonLd, siteUrl } from "./seo-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,15 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PMTE | Company Portfolio | Abu Dhabi",
-  description: "Petroleum Machinery and Technical Equipment - L.L.C. - S.P.C. Company Portfolio: demolition, earthworks, marine works and industrial support in Abu Dhabi since 1994.",
+  metadataBase: new URL(siteUrl),
+  title: { default: "Demolition Company in Abu Dhabi, UAE | PMTE", template: "%s | PMTE" },
+  description: "PMTE is a demolition company in Abu Dhabi, UAE providing controlled demolition, heavy equipment, earthworks and marine works since 1994.",
+  alternates: { canonical: "/", languages: { "en-AE": "/", "ar-AE": "/ar" } },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
   },
   openGraph: {
-    title: "PMTE | Demolition, Earthworks & Marine Works",
-    description: "Established 1994 in Abu Dhabi, UAE.",
+    title: "Demolition Company in Abu Dhabi, UAE | PMTE",
+    description: "Controlled demolition, heavy equipment, earthworks and marine works since 1994.",
+    url: siteUrl,
     images: ["/assets/social/pmte-social-cover.png"],
   },
 };
@@ -33,9 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
         {children}
       </body>
     </html>

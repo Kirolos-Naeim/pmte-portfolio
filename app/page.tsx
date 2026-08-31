@@ -5,19 +5,19 @@ import { CertificateLibrary } from "./CertificateLibrary";
 import { StatsValue } from "./StatsValue";
 
 const capabilities = [
-  { code: "01", title: "Demolition & Decommissioning", Icon: Hammer, copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
-  { code: "02", title: "Excavation & Earthworks", Icon: Tractor, copy: "Bulk excavation, cut-and-fill, site grading, foundation excavation, ground clearing and preparation." },
-  { code: "03", title: "Marine Works", Icon: Waves, copy: "Harbour and shoreline support, underwater concrete-block removal, rock arrangement and specialist waterfront operations." },
+  { code: "01", title: "Demolition & Decommissioning", href: "/demolition-company-abu-dhabi", Icon: Hammer, copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
+  { code: "02", title: "Excavation & Earthworks", href: "/earthworks-excavation-abu-dhabi", Icon: Tractor, copy: "Bulk excavation, cut-and-fill, site grading, foundation excavation, ground clearing and preparation." },
+  { code: "03", title: "Marine Works", href: "/marine-works-abu-dhabi", Icon: Waves, copy: "Harbour and shoreline support, underwater concrete-block removal, rock arrangement and specialist waterfront operations." },
   { code: "04", title: "Concrete & Asphalt Removal", Icon: Drill, copy: "Concrete cutting, structural sawing, asphalt removal and controlled breaking for precise alteration and clearance work." },
   { code: "05", title: "Waste Transportation", Icon: Truck, copy: "Construction-waste transport, debris clearing, organic-waste transport and coordinated haulage to approved facilities." },
   { code: "06", title: "Metal Construction", Icon: Wrench, copy: "Metal construction contracting and practical site support aligned with approved project requirements." },
   { code: "07", title: "Oil & Gas Field Services", Icon: Fuel, copy: "Support services for onshore and offshore fields, installations and facilities within the company’s licensed activity scope." },
-  { code: "08", title: "Equipment & Technical Supply", Icon: PackageSearch, copy: "Oilfield equipment, devices, spare parts, barriers, e-gates and related technical-supply support." },
+  { code: "08", title: "Equipment & Technical Supply", href: "/demolition-equipment-uae", Icon: PackageSearch, copy: "Oilfield equipment, devices, spare parts, barriers, e-gates and related technical-supply support." },
 ];
 
 const projects = [
-  { title: "ADNEC · Phases 1–4", location: "Abu Dhabi", scope: "Multi-phase demolition and removal", sector: "Exhibition & events", image: "/assets/projects/gallery-015-p15-01.jpg" },
-  { title: "Mina Plaza Demolition", location: "Mina Zayed, Abu Dhabi", scope: "Controlled high-rise demolition support", sector: "Urban redevelopment", image: "/assets/projects/mina-plaza-aerial-before-demolition.jpg" },
+  { title: "ADNEC · Phases 1–4", href: "/projects/adnec-demolition-phases", location: "Abu Dhabi", scope: "Multi-phase demolition and removal", sector: "Exhibition & events", image: "/assets/projects/gallery-015-p15-01.jpg" },
+  { title: "Mina Plaza Demolition", href: "/projects/mina-plaza-demolition", location: "Mina Zayed, Abu Dhabi", scope: "Controlled high-rise demolition support", sector: "Urban redevelopment", image: "/assets/projects/mina-plaza-aerial-before-demolition.jpg" },
   { title: "KMART Abu Dhabi", location: "Abu Dhabi", scope: "Building demolition and clearance", sector: "Commercial", image: "/assets/projects/gallery-025-p21-01.jpg" },
   { title: "Mina Zayed Buildings", location: "Mina Zayed, Abu Dhabi", scope: "Building removal and site levelling", sector: "Urban redevelopment", image: "/assets/projects/gallery-035-p28-01.jpg" },
   { title: "Mina Zayed Harbour", location: "Abu Dhabi", scope: "Underwater concrete-block removal", sector: "Marine", image: "/assets/projects/gallery-049-p39-01.jpg" },
@@ -74,8 +74,8 @@ export default function Home() {
         <div className="hero-content">
           <p className="portfolio-tag"><span>Company Portfolio</span><b>2026</b></p>
           <p className="eyebrow"><span /> Established 1994 · Abu Dhabi, UAE</p>
-          <h1>Demolition.<br /><span>Built on control.</span></h1>
-          <p className="hero-copy">Demolition, Earthworks, Marine Works and Industrial Support Solutions</p>
+          <h1>Demolition Company<br /><span>in Abu Dhabi, UAE.</span></h1>
+          <p className="hero-copy">Controlled demolition, heavy equipment, earthworks and marine works since 1994.</p>
           <div className="hero-actions"><a className="primary-action" href="#projects">View project experience <FolderKanban className="action-icon" aria-hidden="true" /></a><a className="text-action" href="/about">Company overview <span>→</span></a></div>
         </div>
         <div className="hero-stats" aria-label="Company highlights">
@@ -86,13 +86,13 @@ export default function Home() {
       <section className="capabilities-section print-page" id="services"><div className="section-shell">
         <div className="section-index light">02 · Core capabilities</div>
         <div className="split-heading light-heading"><div><p className="section-kicker">Integrated site support</p><h2>One accountable<br /><span>field partner.</span></h2></div><p>Licensed activities and documented delivery experience organised around demanding UAE construction, demolition and waterfront environments.</p></div>
-        <div className="capability-grid">{capabilities.map((item) => <article className="capability-card" key={item.code}><span className="capability-code">{item.code}</span><item.Icon className="capability-icon" aria-hidden="true" /><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div>
+        <div className="capability-grid">{capabilities.map((item) => <article className="capability-card" key={item.code}><span className="capability-code">{item.code}</span><item.Icon className="capability-icon" aria-hidden="true" /><h3>{item.href ? <a href={item.href}>{item.title}</a> : item.title}</h3><p>{item.copy}</p></article>)}</div>
       </div></section>
 
       <section className="projects-section section-shell print-page" id="projects">
         <div className="section-index">03 · Featured projects</div>
         <div className="split-heading"><div><p className="section-kicker">Selected experience</p><h2>Documented work.<br /><span>Defined scope.</span></h2></div><p>Project names and scopes reflect the supplied company portfolio. No contract values, completion percentages or performance metrics have been added.</p></div>
-        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><img src={project.image} alt={`${project.title} project photograph`} loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>{project.sector}</p><h3>{project.title}</h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
+        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><img src={project.image} alt={`${project.title} project photograph`} loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>{project.sector}</p><h3>{project.href ? <a href={project.href}>{project.title}</a> : project.title}</h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
       </section>
 
       <section className="clients-section" id="clients"><div className="section-shell">

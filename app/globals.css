@@ -137,6 +137,35 @@ p { text-wrap: pretty; }
 .route-header nav a:hover, .route-header nav a[aria-current="page"] { color: var(--red); }
 .route-header .header-contact { justify-self: end; }
 .route-intro { min-height: 58vh; padding-top: 84px; }
+
+/* Focused service and project pages */
+.seo-page { background: white; }
+.seo-hero { position: relative; display: grid; min-height: min(68vh, 680px); overflow: hidden; background: var(--ink); color: white; }
+.seo-hero > img, .seo-hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.seo-hero > img { object-fit: cover; filter: grayscale(.18) contrast(1.04); }
+.seo-hero-shade { background: linear-gradient(90deg, rgba(12,12,12,.96) 0%, rgba(12,12,12,.78) 48%, rgba(12,12,12,.25) 100%); }
+.seo-hero-content { position: relative; z-index: 1; align-self: center; max-width: 880px; padding: 130px clamp(24px, 8vw, 126px) 74px; }
+.seo-hero-content h1 { max-width: 850px; font-size: clamp(46px, 6vw, 92px); line-height: .94; }
+.seo-hero-content > p:last-child { max-width: 680px; margin: 28px 0 0; color: #e1e4e7; font-size: clamp(17px, 1.8vw, 23px); line-height: 1.55; }
+.seo-content { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr); gap: 90px; align-items: start; }
+.seo-summary h2, .seo-next h2 { margin: 0 0 22px; font-size: clamp(32px, 3.3vw, 54px); font-weight: 600; letter-spacing: -.05em; line-height: 1; text-transform: uppercase; }
+.seo-summary > p { max-width: 760px; margin: 0; color: var(--steel); font-size: 16px; line-height: 1.8; }
+.seo-contact-link, .seo-next > a { display: inline-flex; align-items: center; gap: 12px; margin-top: 31px; padding: 13px 15px; background: var(--red); color: white; font-size: 10px; font-weight: 760; letter-spacing: .09em; text-transform: uppercase; }
+.seo-contact-link svg, .seo-next > a svg { width: 16px; height: 16px; }
+.seo-facts { border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.seo-facts p, .seo-facts li { display: grid; grid-template-columns: 18px 1fr; column-gap: 12px; margin: 0; padding: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #3d3d3d; font-size: 13px; line-height: 1.5; list-style: none; }
+.seo-facts p svg, .seo-facts li svg { width: 15px; color: var(--red); }
+.seo-facts p span { grid-column: 2; color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.seo-facts ul { margin: 0; padding: 0; }
+.seo-next { display: flex; align-items: end; justify-content: space-between; gap: 50px; padding-top: 76px; padding-bottom: 76px; border-top: 1px solid var(--line); }
+.seo-next p { max-width: 650px; margin: 0; color: var(--steel); font-size: 15px; line-height: 1.7; }
+.capability-card h3 a, .project-card h3 a { color: inherit; text-decoration: none; }
+.capability-card h3 a:hover, .project-card h3 a:hover { color: var(--red); }
+.arabic-page .seo-hero-shade { background: linear-gradient(270deg, rgba(12,12,12,.96) 0%, rgba(12,12,12,.78) 48%, rgba(12,12,12,.25) 100%); }
+.arabic-page .seo-hero-content { margin-right: 0; margin-left: auto; text-align: right; }
+.arabic-page .seo-summary h2, .arabic-page .seo-next h2 { text-transform: none; }
+.arabic-page .seo-facts p span { font-family: Tahoma, Arial, sans-serif; letter-spacing: .03em; }
+.arabic-page .seo-contact-link, .arabic-page .seo-next > a { text-transform: none; }
 .header-contact { justify-self: end; padding: 8px 0; border-bottom: 2px solid var(--red); font-size: 10px; font-weight: 760; letter-spacing: .14em; text-transform: uppercase; }
 .hero-content { position: relative; z-index: 1; align-self: center; max-width: 1100px; padding: 66px clamp(24px, 8vw, 126px); }
 .portfolio-tag { display: flex; width: fit-content; margin: 0 0 34px; border: 1px solid rgba(255,255,255,.3); font-size: 9px; font-weight: 780; letter-spacing: .16em; text-transform: uppercase; }
@@ -429,6 +458,10 @@ h1 span { color: #c9cdd2; }
   .scroll-nav { padding: 9px 20px; }
   .scroll-nav-brand img { width: 164px; }
   .section-shell { padding: 78px 20px; }
+  .seo-hero { min-height: 540px; }
+  .seo-hero-content { padding: 116px 20px 56px; }
+  .seo-content { grid-template-columns: 1fr; gap: 42px; }
+  .seo-next { align-items: flex-start; flex-direction: column; gap: 30px; }
   .split-heading, .overview-grid, .fleet-top, .leadership-grid { grid-template-columns: 1fr; gap: 38px; }
   .split-heading { margin-top: 48px; }
   .site-header { padding: 18px 20px; }
