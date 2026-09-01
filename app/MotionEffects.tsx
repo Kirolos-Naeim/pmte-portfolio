@@ -5,15 +5,24 @@ import { useEffect } from "react";
 export function MotionEffects() {
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const compact = window.matchMedia("(max-width: 760px)").matches;
     const sections = Array.from(document.querySelectorAll<HTMLElement>("main > section:not(.hero)"));
-    if (reduced) return;
+    if (reduced || compact || !("IntersectionObserver" in window)) return;
+
     sections.forEach((section) => section.classList.add("motion-reveal"));
     const observer = new IntersectionObserver((entries) => entries.forEach(({ isIntersecting, target }) => {
       if (isIntersecting) { target.classList.add("is-revealed"); observer.unobserve(target); }
-    }), { threshold: 0.12 });
+    }), { threshold: 0.01, rootMargin: "0px 0px -6% 0px" });
     sections.forEach((section) => observer.observe(section));
 
+    // Never leave content hidden if a browser misses an observer callback while
+    // restoring a hash position or returning from the back/forward cache.
+    const revealFallback = window.setTimeout(() => {
+      sections.forEach((section) => section.classList.add("is-revealed"));
+    }, 1400);
+
     const interactive = document.querySelectorAll<HTMLElement>(".project-card, .capability-card");
+    const precisePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     const reset = (element: HTMLElement) => element.style.removeProperty("--tilt");
     const move = (event: PointerEvent) => {
       const element = event.currentTarget as HTMLElement;
@@ -22,8 +31,12 @@ export function MotionEffects() {
       element.style.setProperty("--tilt", `${tilt}deg`);
     };
     const leave = (event: PointerEvent) => reset(event.currentTarget as HTMLElement);
-    interactive.forEach((element) => { element.addEventListener("pointermove", move); element.addEventListener("pointerleave", leave); });
-    return () => { observer.disconnect(); interactive.forEach((element) => { element.removeEventListener("pointermove", move); element.removeEventListener("pointerleave", leave); }); };
+    if (precisePointer) interactive.forEach((element) => { element.addEventListener("pointermove", move); element.addEventListener("pointerleave", leave); });
+    return () => {
+      window.clearTimeout(revealFallback);
+      observer.disconnect();
+      if (precisePointer) interactive.forEach((element) => { element.removeEventListener("pointermove", move); element.removeEventListener("pointerleave", leave); });
+    };
   }, []);
   return null;
 }
