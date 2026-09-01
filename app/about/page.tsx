@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import { FileDown } from "lucide-react";
 import { StatsValue } from "../StatsValue";
 import { StickyNav } from "../StickyNav";
 
 const facts = [["1994", "Establishment year"], ["Public + private", "Project sectors"], ["8", "Licensed activities"], ["25+", "Vehicles and machines recorded in the source profile"]];
+
+export const metadata: Metadata = {
+  title: "About PMTE: Abu Dhabi Demolition Contractor",
+  description: "Learn about PMTE, an Abu Dhabi demolition, earthworks, marine works and technical-services contractor established in 1994.",
+  alternates: { canonical: "/about", languages: { "en-AE": "/about", "x-default": "/about" } },
+  openGraph: { title: "About PMTE | Abu Dhabi Demolition Contractor", description: "Abu Dhabi demolition, earthworks, marine works and technical-services experience since 1994.", url: "/about", images: ["/assets/social/pmte-social-cover.png"] },
+};
 
 export default function AboutPage() {
   return <main className="route-page">

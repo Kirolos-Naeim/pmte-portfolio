@@ -18,9 +18,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: service.description,
     alternates: {
       canonical: `/${service.slug}`,
-      languages: { en: `/${service.slug}`, ar: `/ar/${service.slug}` },
+      languages: { "en-AE": `/${service.slug}`, "ar-AE": `/ar/${service.slug}`, "x-default": `/${service.slug}` },
     },
-    openGraph: { title: service.title, description: service.description, url: `${siteUrl}/${service.slug}`, images: [service.image] },
+    openGraph: { title: `${service.title} | PMTE`, description: service.description, url: `${siteUrl}/${service.slug}`, locale: "en_AE", type: "website", images: [{ url: service.image, alt: service.title }] },
+    twitter: { card: "summary_large_image", title: `${service.title} | PMTE`, description: service.description, images: [service.image] },
   };
 }
 

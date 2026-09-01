@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://petrolum.ae/</loc></url>
-  <url><loc>https://petrolum.ae/about</loc></url>
-  <url><loc>https://petrolum.ae/gallery</loc></url>
-  <url><loc>https://petrolum.ae/ar</loc></url>
-  <url><loc>https://petrolum.ae/ar/gallery</loc></url>
-  <url><loc>https://petrolum.ae/demolition-company-abu-dhabi</loc></url>
-  <url><loc>https://petrolum.ae/demolition-equipment-uae</loc></url>
-  <url><loc>https://petrolum.ae/marine-works-abu-dhabi</loc></url>
-  <url><loc>https://petrolum.ae/earthworks-excavation-abu-dhabi</loc></url>
-  <url><loc>https://petrolum.ae/ar/demolition-company-abu-dhabi</loc></url>
-  <url><loc>https://petrolum.ae/ar/demolition-equipment-uae</loc></url>
-  <url><loc>https://petrolum.ae/ar/marine-works-abu-dhabi</loc></url>
-  <url><loc>https://petrolum.ae/ar/earthworks-excavation-abu-dhabi</loc></url>
-  <url><loc>https://petrolum.ae/projects/mina-plaza-demolition</loc></url>
-  <url><loc>https://petrolum.ae/projects/adnec-demolition-phases</loc></url>
-  <url><loc>https://petrolum.ae/projects/mina-zayed-harbour-marine-works</loc></url>
-  <url><loc>https://petrolum.ae/projects/al-ain-zoo-earthworks</loc></url>
-  <url><loc>https://petrolum.ae/projects/fishermans-wharf-phase-1b</loc></url>
-  <url><loc>https://petrolum.ae/projects/saadiyat-bridge-wall-demolition</loc></url>
-  <url><loc>https://petrolum.ae/ar/projects/mina-plaza-demolition</loc></url>
-  <url><loc>https://petrolum.ae/ar/projects/adnec-demolition-phases</loc></url>
-  <url><loc>https://petrolum.ae/ar/projects/mina-zayed-harbour-marine-works</loc></url>
-  <url><loc>https://petrolum.ae/ar/projects/al-ain-zoo-earthworks</loc></url>
-  <url><loc>https://petrolum.ae/ar/projects/fishermans-wharf-phase-1b</loc></url>
-  <url><loc>https://petrolum.ae/ar/projects/saadiyat-bridge-wall-demolition</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://petrolum.ae/</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/"/></url>
+  <url><loc>https://petrolum.ae/ar</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/"/></url>
+  <url><loc>https://petrolum.ae/about</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/gallery</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/gallery"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/gallery"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/gallery"/></url>
+  <url><loc>https://petrolum.ae/ar/gallery</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/gallery"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/gallery"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/gallery"/></url>
+
+  <url><loc>https://petrolum.ae/demolition-company-abu-dhabi</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/demolition-company-abu-dhabi"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/demolition-company-abu-dhabi"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/demolition-company-abu-dhabi"/></url>
+  <url><loc>https://petrolum.ae/ar/demolition-company-abu-dhabi</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/demolition-company-abu-dhabi"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/demolition-company-abu-dhabi"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/demolition-company-abu-dhabi"/></url>
+  <url><loc>https://petrolum.ae/demolition-equipment-uae</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/demolition-equipment-uae"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/demolition-equipment-uae"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/demolition-equipment-uae"/></url>
+  <url><loc>https://petrolum.ae/ar/demolition-equipment-uae</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/demolition-equipment-uae"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/demolition-equipment-uae"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/demolition-equipment-uae"/></url>
+  <url><loc>https://petrolum.ae/marine-works-abu-dhabi</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/marine-works-abu-dhabi"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/marine-works-abu-dhabi"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/marine-works-abu-dhabi"/></url>
+  <url><loc>https://petrolum.ae/ar/marine-works-abu-dhabi</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/marine-works-abu-dhabi"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/marine-works-abu-dhabi"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/marine-works-abu-dhabi"/></url>
+  <url><loc>https://petrolum.ae/earthworks-excavation-abu-dhabi</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/earthworks-excavation-abu-dhabi"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/earthworks-excavation-abu-dhabi"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/earthworks-excavation-abu-dhabi"/></url>
+  <url><loc>https://petrolum.ae/ar/earthworks-excavation-abu-dhabi</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/earthworks-excavation-abu-dhabi"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/earthworks-excavation-abu-dhabi"/><xhtml:link rel="alternate" hreflang="x-default" href="https://petrolum.ae/earthworks-excavation-abu-dhabi"/></url>
+
+  <url><loc>https://petrolum.ae/projects/mina-plaza-demolition</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/mina-plaza-demolition"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/mina-plaza-demolition"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/mina-plaza-demolition</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/adnec-demolition-phases</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/adnec-demolition-phases"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/adnec-demolition-phases"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/adnec-demolition-phases</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/kmart-abu-dhabi-demolition</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/kmart-abu-dhabi-demolition"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/kmart-abu-dhabi-demolition"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/kmart-abu-dhabi-demolition</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/mina-zayed-buildings-removal</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/mina-zayed-buildings-removal"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/mina-zayed-buildings-removal"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/mina-zayed-buildings-removal</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/mina-zayed-harbour-marine-works</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/mina-zayed-harbour-marine-works"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/mina-zayed-harbour-marine-works"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/mina-zayed-harbour-marine-works</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/shoreline-rock-arrangement</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/shoreline-rock-arrangement"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/shoreline-rock-arrangement"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/shoreline-rock-arrangement</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/saadiyat-bridge-wall-demolition</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/saadiyat-bridge-wall-demolition"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/saadiyat-bridge-wall-demolition"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/saadiyat-bridge-wall-demolition</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/saif-bin-darwish-warehouse-demolition</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/saif-bin-darwish-warehouse-demolition"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/saif-bin-darwish-warehouse-demolition"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/saif-bin-darwish-warehouse-demolition</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/al-ain-zoo-earthworks</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/al-ain-zoo-earthworks"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/al-ain-zoo-earthworks"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/al-ain-zoo-earthworks</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/fishermans-wharf-phase-1b</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/fishermans-wharf-phase-1b"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/fishermans-wharf-phase-1b"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/fishermans-wharf-phase-1b</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/regional-ground-works</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/regional-ground-works"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/regional-ground-works"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/regional-ground-works</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://petrolum.ae/projects/adec-school-demolition</loc><lastmod>2026-09-01</lastmod><xhtml:link rel="alternate" hreflang="en-AE" href="https://petrolum.ae/projects/adec-school-demolition"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://petrolum.ae/ar/projects/adec-school-demolition"/></url>
+  <url><loc>https://petrolum.ae/ar/projects/adec-school-demolition</loc><lastmod>2026-09-01</lastmod></url>
 </urlset>

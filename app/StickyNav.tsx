@@ -23,7 +23,7 @@ export function StickyNav({ locale = "en", alwaysSolid = false }: { locale?: "en
   }, []);
 
   return <header className={`scroll-nav is-visible ${alwaysSolid || scrolled ? "is-scrolled" : "is-over-hero"}`} dir="ltr">
-    <a className="scroll-nav-brand" href={alwaysSolid ? (isArabic ? "/ar" : "/") : "#home"} aria-label="PMTE home"><img src="/assets/logo/pmte-logo-primary.png" alt="PMTE" /></a>
+    <a className="scroll-nav-brand" href={alwaysSolid ? (isArabic ? "/ar" : "/") : "#home"} aria-label="PMTE home"><img src="/assets/logo/pmte-logo-primary.png" alt="PMTE demolition company Abu Dhabi logo" /></a>
     <button className="scroll-nav-toggle" type="button" aria-expanded={menuOpen} aria-controls="scrollNavLinks" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}<span className="sr-only">Toggle navigation</span></button>
     <nav className={menuOpen ? "is-open" : ""} id="scrollNavLinks" aria-label="PMTE navigation">
       <a href={`${anchorRoot}#home`}><Home />{copy.home}</a>
