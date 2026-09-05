@@ -1,5 +1,6 @@
 import { ArrowRight, Check, MapPin, Phone } from "lucide-react";
 import { StickyNav } from "./StickyNav";
+import { OptimizedImage } from "./OptimizedImage";
 import { businessId, projects, services, siteUrl, websiteId } from "./seo-data";
 
 type TextBlock = { title: string; text: string };
@@ -137,7 +138,7 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
     <StickyNav locale={locale} alwaysSolid />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <section className="seo-hero">
-      <img src={detail.image} alt={imageAlt} fetchPriority="high" />
+      <OptimizedImage src={detail.image} alt={imageAlt} fetchPriority="high" loading="eager" widths={[768, 1280, 1920]} quality={88} />
       <div className="seo-hero-shade" aria-hidden="true" />
       <div className="seo-hero-content">
         <nav className="seo-breadcrumbs" aria-label={arabic ? "مسار الصفحة" : "Breadcrumb"}><a href={arabic ? "/ar" : "/"}>{copy.home}</a><span>/</span><a href={`${categoryPath}${kind === "project" ? "#projects" : "#services"}`}>{copy.category}</a></nav>
@@ -152,7 +153,7 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
 
     {copy.process?.length ? <section className="seo-deep-section"><div className="section-shell"><p className="section-kicker">PMTE · {copy.category}</p><h2>{copy.approach}</h2><div className="seo-process-grid">{copy.process.map((item, index) => <article key={item.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section> : null}
 
-    {kind === "service" && relatedProjects.length ? <section className="seo-related section-shell"><p className="section-kicker">PMTE · Abu Dhabi</p><h2>{copy.experience}</h2><div className="seo-related-grid">{relatedProjects.map((project) => project && <a key={project.slug} href={arabic ? `/ar/projects/${project.slug}` : `/projects/${project.slug}`}><img src={project.image} alt={arabic ? `مشروع ${project.ar.title}` : `${project.title} project`} loading="lazy" /><span>{arabic ? project.ar.location : project.location}</span><h3>{arabic ? project.ar.title : project.title}</h3><ArrowRight aria-hidden="true" /></a>)}</div></section> : null}
+    {kind === "service" && relatedProjects.length ? <section className="seo-related section-shell"><p className="section-kicker">PMTE · Abu Dhabi</p><h2>{copy.experience}</h2><div className="seo-related-grid">{relatedProjects.map((project) => project && <a key={project.slug} href={arabic ? `/ar/projects/${project.slug}` : `/projects/${project.slug}`}><OptimizedImage src={project.image} alt={arabic ? `مشروع ${project.ar.title}` : `${project.title} project`} loading="lazy" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, 33vw" /><span>{arabic ? project.ar.location : project.location}</span><h3>{arabic ? project.ar.title : project.title}</h3><ArrowRight aria-hidden="true" /></a>)}</div></section> : null}
 
     {kind === "project" && relatedService ? <section className="seo-related-service section-shell"><div><p className="section-kicker">PMTE · {copy.relatedService}</p><h2>{arabic ? relatedService.ar.title : relatedService.title}</h2><p>{arabic ? relatedService.ar.description : relatedService.description}</p></div><a href={arabic ? `/ar/${relatedService.slug}` : `/${relatedService.slug}`}>{copy.relatedService}<ArrowRight aria-hidden="true" /></a></section> : null}
 

@@ -3,6 +3,7 @@ import { MotionEffects } from "./MotionEffects";
 import { StickyNav } from "./StickyNav";
 import { CertificateLibrary } from "./CertificateLibrary";
 import { StatsValue } from "./StatsValue";
+import { OptimizedImage } from "./OptimizedImage";
 
 const capabilities = [
   { code: "01", title: "Demolition & Decommissioning", href: "/demolition-company-abu-dhabi", Icon: Hammer, copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
@@ -69,7 +70,7 @@ export default function Home() {
       <StickyNav />
       <MotionEffects />
       <section className="hero print-cover" id="home">
-        <img className="hero-photo" src="/hero.jpg" alt="PMTE demolition excavator working at a building site in Abu Dhabi" fetchPriority="high" />
+        <OptimizedImage className="hero-photo" src="/hero.jpg" alt="PMTE demolition excavator working at a building site in Abu Dhabi" fetchPriority="high" loading="eager" widths={[768, 1280, 1920]} quality={88} />
         <div className="hero-shade" aria-hidden="true" />
         <div className="hero-content">
           <p className="portfolio-tag"><span>Company Portfolio</span><b>2026</b></p>
@@ -92,7 +93,7 @@ export default function Home() {
       <section className="projects-section section-shell print-page" id="projects">
         <div className="section-index">03 · Featured projects</div>
         <div className="split-heading"><div><p className="section-kicker">Selected experience</p><h2>Documented work.<br /><span>Defined scope.</span></h2></div><p>Project names and scopes reflect the supplied company portfolio. No contract values, completion percentages or performance metrics have been added.</p></div>
-        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><img src={project.image} alt={`${project.title} — ${project.scope} project in ${project.location}`} loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>{project.sector}</p><h3><a href={project.href}>{project.title}</a></h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
+        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><OptimizedImage src={project.image} alt={`${project.title} — ${project.scope} project in ${project.location}`} loading="lazy" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, (max-width: 1280px) 50vw, 33vw" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>{project.sector}</p><h3><a href={project.href}>{project.title}</a></h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
       </section>
 
       <section className="clients-section" id="clients"><div className="section-shell">
@@ -101,12 +102,12 @@ export default function Home() {
         <div className="client-grid">{clients.map((client) => <article className="client-card" key={client.name}><img src={client.image} alt={`${client.name} logo`} loading="lazy" /></article>)}</div>
       </div></section>
 
-      <section className="record-section print-page" id="achievement"><img className="record-photo" src="/assets/projects/mina-plaza-aerial-before-demolition.jpg" alt="Mina Plaza towers in Abu Dhabi before the documented controlled demolition" loading="lazy" /><div className="record-shade" aria-hidden="true" /><div className="record-content"><p className="section-kicker">Major achievement · 27 November 2020</p><p className="record-number">165.032 <span>metres</span></p><h2>Associated with a Guinness World Records controlled-demolition achievement.</h2><p>PMTE was associated with Modon Properties on the controlled demolition of a 165.032-metre building in Abu Dhabi on 27 November 2020. This statement identifies PMTE as an associated contractor and does not imply that PMTE was the sole record holder.</p><a className="record-evidence-link" href="#credentials">View supporting certificate <span aria-hidden="true">↓</span></a></div></section>
+      <section className="record-section print-page" id="achievement"><OptimizedImage className="record-photo" src="/assets/projects/mina-plaza-aerial-before-demolition.jpg" alt="Mina Plaza towers in Abu Dhabi before the documented controlled demolition" loading="lazy" widths={[768, 1280, 1920]} quality={88} /><div className="record-shade" aria-hidden="true" /><div className="record-content"><p className="section-kicker">Major achievement · 27 November 2020</p><p className="record-number">165.032 <span>metres</span></p><h2>Associated with a Guinness World Records controlled-demolition achievement.</h2><p>PMTE was associated with Modon Properties on the controlled demolition of a 165.032-metre building in Abu Dhabi on 27 November 2020. This statement identifies PMTE as an associated contractor and does not imply that PMTE was the sole record holder.</p><a className="record-evidence-link" href="#credentials">View supporting certificate <span aria-hidden="true">↓</span></a></div></section>
 
       <section className="fleet-section section-shell print-page" id="fleet">
         <div className="section-index">04 · Fleet & equipment</div>
         <div className="fleet-top"><div className="section-title"><p className="section-kicker">Project-specific mobilisation</p><h2>Equipment matched<br /><span>to the work.</span></h2></div><div className="fleet-copy"><p>The supplied profile records more than 25 vehicles and machines. Quantities, performance ratings and specifications are intentionally not stated where the source evidence does not confirm them.</p><div className="verified-models"><article><span>Verified model</span><strong>LiuGong 856H</strong><p>Wheel loader</p></article><article><span>Verified model</span><strong>Caterpillar 340 D2 L</strong><p>Excavator</p></article></div></div></div>
-        <div className="equipment-strip"><img src="/assets/equipment/excavator-demolition.jpg" alt="PMTE heavy demolition excavator operating in the UAE" loading="lazy" /><img src="/assets/equipment/mobile-crane.jpg" alt="PMTE mobile crane supporting lifting operations in Abu Dhabi" loading="lazy" /><img src="/assets/equipment/material-handling.jpg" alt="PMTE material-handling equipment for UAE project sites" loading="lazy" /><img src="/assets/equipment/lifting-operations.jpg" alt="Heavy lifting operation supported by PMTE equipment" loading="lazy" /></div>
+        <div className="equipment-strip"><OptimizedImage src="/assets/equipment/excavator-demolition.jpg" alt="PMTE heavy demolition excavator operating in the UAE" loading="lazy" widths={[420, 720, 960]} sizes="(max-width: 760px) 100vw, 25vw" /><OptimizedImage src="/assets/equipment/mobile-crane.jpg" alt="PMTE mobile crane supporting lifting operations in Abu Dhabi" loading="lazy" widths={[420, 720, 960]} sizes="(max-width: 760px) 100vw, 25vw" /><OptimizedImage src="/assets/equipment/material-handling.jpg" alt="PMTE material-handling equipment for UAE project sites" loading="lazy" widths={[420, 720, 960]} sizes="(max-width: 760px) 100vw, 25vw" /><OptimizedImage src="/assets/equipment/lifting-operations.jpg" alt="Heavy lifting operation supported by PMTE equipment" loading="lazy" widths={[420, 720, 960]} sizes="(max-width: 760px) 100vw, 25vw" /></div>
         <ul className="equipment-list" aria-label="Equipment categories">{equipment.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ul>
       </section>
 

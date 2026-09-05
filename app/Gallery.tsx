@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import galleryData from "./gallery-manifest.json";
+import { OptimizedImage } from "./OptimizedImage";
 
 type GalleryItem = (typeof galleryData)[number];
 
@@ -72,7 +73,13 @@ export function Gallery({ locale = "en" }: { locale?: "en" | "ar" }) {
             type="button"
             aria-label={locale === "ar" ? `فتح ${item.project}` : `Open ${item.alt}`}
           >
-            <img src={item.src} alt={item.alt} loading="lazy" />
+            <OptimizedImage
+              src={item.src}
+              alt={item.alt}
+              loading="lazy"
+              widths={[360, 640, 960]}
+              sizes="(max-width: 720px) 100vw, (max-width: 1180px) 50vw, 33vw"
+            />
             <span className="gallery-card-shade" />
             <span className="gallery-card-copy">
               <small>{item.category}</small>
@@ -88,7 +95,13 @@ export function Gallery({ locale = "en" }: { locale?: "en" | "ar" }) {
           <button className="lightbox-close" type="button" onClick={() => setSelected(null)} aria-label={locale === "ar" ? "إغلاق الصورة" : "Close image"}>×</button>
           <button className="lightbox-nav previous" type="button" onClick={(event) => { event.stopPropagation(); move(-1); }} aria-label={locale === "ar" ? "الصورة السابقة" : "Previous image"}>‹</button>
           <figure onClick={(event) => event.stopPropagation()}>
-            <img src={selected.src} alt={selected.alt} />
+            <OptimizedImage
+              src={selected.src}
+              alt={selected.alt}
+              widths={[960, 1440, 1920]}
+              sizes="min(92vw, 1600px)"
+              quality={88}
+            />
             <figcaption><span>{selected.category}</span>{selected.project}</figcaption>
           </figure>
           <button className="lightbox-nav next" type="button" onClick={(event) => { event.stopPropagation(); move(1); }} aria-label={locale === "ar" ? "الصورة التالية" : "Next image"}>›</button>
