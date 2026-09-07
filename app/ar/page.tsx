@@ -3,6 +3,7 @@ import { Drill, Fuel, Hammer, MapPinned, PackageSearch, Tractor, Truck, Waves, W
 import { CertificateLibrary } from "../CertificateLibrary";
 import { StickyNav } from "../StickyNav";
 import { OptimizedImage } from "../OptimizedImage";
+import { HeroMedia } from "../HeroMedia";
 
 const capabilities = [
   { title: "الهدم وإخراج المنشآت من الخدمة", href: "/ar/demolition-company-abu-dhabi", copy: "هدم إنشائي وتفكيك منضبط وإزالة مبانٍ ودعم أعمال إخراج المنشآت من الخدمة.", Icon: Hammer },
@@ -16,12 +17,12 @@ const capabilities = [
 ];
 
 const projects = [
-  ["مركز أدنيك · المراحل 1–4", "أبوظبي", "هدم وإزالة متعددة المراحل", "/assets/projects/gallery-015-p15-01.jpg", "adnec-demolition-phases"],
-  ["هدم مينا بلازا", "ميناء زايد، أبوظبي", "دعم هدم الأبراج بصورة منضبطة", "/assets/projects/mina-plaza-aerial-before-demolition.jpg", "mina-plaza-demolition"],
-  ["كمارت أبوظبي", "أبوظبي", "هدم مبانٍ وإخلاء الموقع", "/assets/projects/gallery-025-p21-01.jpg", "kmart-abu-dhabi-demolition"],
-  ["مباني ميناء زايد", "ميناء زايد، أبوظبي", "إزالة مبانٍ وتسوية الموقع", "/assets/projects/gallery-035-p28-01.jpg", "mina-zayed-buildings-removal"],
+  ["مركز أدنيك · المراحل 1–4", "أبوظبي", "هدم وإزالة متعددة المراحل", "/assets/projects/representative/adnec-demolition-representative.png", "adnec-demolition-phases", true],
+  ["هدم مينا بلازا", "ميناء زايد، أبوظبي", "دعم هدم الأبراج بصورة منضبطة", "/assets/projects/mina-plaza-aerial-before-demolition.jpg", "mina-plaza-demolition", false],
+  ["كمارت أبوظبي", "أبوظبي", "هدم مبانٍ وإخلاء الموقع", "/assets/projects/representative/kmart-demolition-representative.png", "kmart-abu-dhabi-demolition", true],
+  ["مباني ميناء زايد", "ميناء زايد، أبوظبي", "إزالة مبانٍ وتسوية الموقع", "/assets/projects/representative/mina-zayed-buildings-representative.png", "mina-zayed-buildings-removal", true],
   ["ميناء زايد البحري", "أبوظبي", "إزالة كتل خرسانية تحت الماء", "/assets/projects/gallery-049-p39-01.jpg", "mina-zayed-harbour-marine-works"],
-  ["حديقة الحيوانات بالعين", "العين", "قطع وردم وهدم وحفريات", "/assets/projects/gallery-069-p54-01.jpg", "al-ain-zoo-earthworks"],
+  ["حديقة الحيوانات بالعين", "العين", "قطع وردم وهدم وحفريات", "/assets/projects/representative/al-ain-earthworks-representative.png", "al-ain-zoo-earthworks", true],
 ];
 
 const clients = [
@@ -51,7 +52,7 @@ export default function ArabicPortfolio() {
   return <main className="arabic-page" dir="rtl" lang="ar">
     <StickyNav locale="ar" />
     <section className="hero arabic-hero" id="home">
-      <OptimizedImage className="hero-photo" src="/hero.jpg" alt="حفارة PMTE تنفذ أعمال هدم في موقع بأبوظبي" fetchPriority="high" loading="eager" widths={[768, 1280, 1920]} quality={88} /><div className="hero-shade" aria-hidden="true" />
+      <HeroMedia locale="ar" /><div className="hero-shade" aria-hidden="true" />
       <div className="hero-content">
         <p className="portfolio-tag"><span>ملف الشركة</span><b>2026</b></p>
         <p className="eyebrow"><span /> تأسست عام 1994 · أبوظبي، الإمارات العربية المتحدة</p>
@@ -66,7 +67,7 @@ export default function ArabicPortfolio() {
 
     <section className="capabilities-section" id="services"><div className="section-shell"><div className="section-index light">02 · الخدمات الأساسية</div><div className="split-heading light-heading"><div><p className="section-kicker">دعم متكامل للمواقع</p><h2>شريك ميداني<br /><span>واحد ومسؤول.</span></h2></div><p>أنشطة مرخّصة وخبرة تنفيذ موثقة للبيئات الإنشائية وبيئات الهدم والواجهات البحرية في دولة الإمارات.</p></div><div className="capability-grid">{capabilities.map(({ title, href, copy, Icon }, index) => <article className="capability-card" key={title}><span className="capability-code">{String(index + 1).padStart(2, "0")}</span><Icon className="capability-icon" aria-hidden="true" /><h3>{href ? <a href={href}>{title}</a> : title}</h3><p>{copy}</p></article>)}</div></div></section>
 
-    <section className="projects-section section-shell" id="projects"><div className="section-index">03 · مشاريع مختارة</div><div className="split-heading"><div><p className="section-kicker">خبرات موثقة</p><h2>عمل واضح.<br /><span>نطاق محدد.</span></h2></div><p>تعكس أسماء المشاريع ونطاقاتها ملف الشركة المقدم. لم تتم إضافة قيم عقود أو نسب إنجاز أو مؤشرات أداء غير موثقة.</p></div><div className="project-grid">{projects.map(([title, location, scope, image, slug], index) => <article className="project-card" key={title}><div className="project-image"><OptimizedImage src={image} alt={`${title} — ${scope} في ${location}`} loading="lazy" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, (max-width: 1280px) 50vw, 33vw" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>مشاريع PMTE</p><h3><a href={`/ar/projects/${slug}`}>{title}</a></h3><dl><div><dt>الموقع</dt><dd>{location}</dd></div><div><dt>نطاق العمل</dt><dd>{scope}</dd></div></dl></div></article>)}</div><p className="arabic-gallery-link"><a href="/ar/gallery">استعرض معرض الصور الكامل ←</a></p></section>
+    <section className="projects-section section-shell" id="projects"><div className="section-index">03 · مشاريع مختارة</div><div className="split-heading"><div><p className="section-kicker">خبرات موثقة</p><h2>عمل واضح.<br /><span>نطاق محدد.</span></h2></div><p>تعكس أسماء المشاريع ونطاقاتها ملف الشركة المقدم. لم تتم إضافة قيم عقود أو نسب إنجاز أو مؤشرات أداء غير موثقة.</p></div><div className="project-grid">{projects.map(([title, location, scope, image, slug, representative], index) => <article className="project-card" key={title}><div className="project-image"><OptimizedImage src={image} alt={representative ? `صورة تمثيلية لبيئة مشروع ${title}` : `${title} — ${scope} في ${location}`} loading="lazy" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, (max-width: 1280px) 50vw, 33vw" /><span>{String(index + 1).padStart(2, "0")}</span>{representative ? <small className="project-image-note">صورة تمثيلية</small> : null}</div><div className="project-body"><p>مشاريع PMTE</p><h3><a href={`/ar/projects/${slug}`}>{title}</a></h3><dl><div><dt>الموقع</dt><dd>{location}</dd></div><div><dt>نطاق العمل</dt><dd>{scope}</dd></div></dl></div></article>)}</div><p className="arabic-gallery-link"><a href="/ar/gallery">استعرض معرض الصور الكامل ←</a></p></section>
 
     <section className="clients-section" id="clients"><div className="section-shell"><div className="section-index light">04 · خبرات مع العملاء</div><div className="split-heading light-heading"><div><p className="section-kicker">سجل العملاء السابقين</p><h2>موثوقون عبر<br /><span>أبوظبي.</span></h2></div><p>جهات وردت في ملف PMTE باعتبارها عملاء سابقين أو مراجع لخبرات المشاريع. تبقى تفاصيل المشاركة خاصة بكل مشروع.</p></div><div className="client-grid">{clients.map(([name, image]) => <article className="client-card" key={name}><img src={image} alt={`شعار ${name}`} loading="lazy" /></article>)}</div></div></section>
 

@@ -91,7 +91,12 @@ p { text-wrap: pretty; }
 }
 .hero > .hero-content { grid-row: 2; }
 .hero > .hero-stats { grid-row: 3; }
-.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 46%; filter: grayscale(.18) contrast(1.06); transform: scale(1.01); animation: hero-photo-shift 18s ease-in-out infinite alternate; }
+.hero-media, .hero-poster, .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-media { overflow: hidden; }
+.hero-poster, .hero-video { object-fit: cover; object-position: center 46%; filter: grayscale(.18) contrast(1.06); }
+.hero-poster { transform: scale(1.01); animation: hero-photo-shift 18s ease-in-out infinite alternate; }
+.hero-video { z-index: 1; opacity: 0; transform: scale(1.015); transition: opacity .7s ease; }
+.hero-video.is-ready { opacity: 1; }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,.99) 0%, rgba(10,10,10,.90) 42%, rgba(10,10,10,.30) 82%), linear-gradient(0deg, rgba(10,10,10,.93) 0%, transparent 54%); }
 .site-header {
   position: relative;
@@ -275,6 +280,7 @@ h1 span { color: #c9cdd2; }
 .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
 .project-card:hover .project-image img { transform: scale(1.025); }
 .project-image > span { position: absolute; top: 0; right: 0; min-width: 44px; padding: 12px 10px; background: var(--red); color: white; font-family: var(--font-geist-mono), monospace; font-size: 9px; text-align: center; }
+.project-image-note { position: absolute; bottom: 0; left: 0; margin: 0; padding: 8px 10px; background: rgba(21,21,21,.84); color: white; font-family: var(--font-geist-mono), monospace; font-size: 8px; font-style: normal; letter-spacing: .08em; text-transform: uppercase; }
 .project-body { display: grid; grid-template-rows: auto auto 1fr; padding: 23px; }
 .project-body > p { margin: 0 0 15px; color: var(--red); font-family: var(--font-geist-mono), monospace; font-size: 8px; font-weight: 720; letter-spacing: .13em; text-transform: uppercase; }
 .project-body h3 { margin: 0; font-size: 23px; font-weight: 610; letter-spacing: -.04em; line-height: 1.08; text-transform: uppercase; }
@@ -282,6 +288,7 @@ h1 span { color: #c9cdd2; }
 .project-body dl div { display: grid; grid-template-columns: 76px 1fr; gap: 12px; margin-top: 8px; }
 .project-body dt { color: var(--steel); font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
 .project-body dd { margin: 0; color: #414141; font-size: 11px; line-height: 1.4; }
+.seo-image-note { margin: 18px 0 0; color: rgba(255,255,255,.75); font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 
 /* Motion is structural: reveal the next section and provide brief physical feedback on cards. */
 .motion-reveal { opacity: 0; transform: translateY(28px); transition: opacity .62s ease, transform .62s cubic-bezier(.22,.8,.24,1); }
@@ -578,7 +585,7 @@ h1 span { color: #c9cdd2; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-photo, .hero-content > *, .hero-stats, .stat-value { animation: none !important; }
+  .hero-poster, .hero-content > *, .hero-stats, .stat-value { animation: none !important; }
   .motion-reveal, .motion-reveal.is-revealed { opacity: 1; transform: none; transition: none; }
   .scroll-nav, .scroll-nav svg path, .capability-card, .project-card, .capability-icon, .project-image img { animation: none !important; transition: none; }
 }
@@ -588,6 +595,7 @@ h1 span { color: #c9cdd2; }
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   html { scroll-behavior: auto; }
   body { background: white; color: #151515; font-size: 9pt; }
+  .hero-video { display: none !important; }
   .scroll-nav, .site-header nav, .header-contact, .hero-actions, .document-link, .gallery-toolbar, .gallery-open, .lightbox, .certificate-modal, footer a { display: none !important; }
   .record-certificate { display: none; }
   .print-cover { min-height: 273mm; height: 273mm; break-after: page; page-break-after: always; }

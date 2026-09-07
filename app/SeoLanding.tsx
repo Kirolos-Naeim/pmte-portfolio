@@ -12,6 +12,7 @@ type Detail = {
   intro?: string;
   description: string;
   image: string;
+  imageType?: "representative";
   scope?: readonly string[];
   paragraphs?: readonly string[];
   process?: readonly TextBlock[];
@@ -57,6 +58,7 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
     relatedService: "الخدمة المرتبطة",
     back: "العودة إلى ملف الشركة",
     home: "الرئيسية",
+    imageNote: "صورة تمثيلية لبيئة المشروع",
   } : {
     title: detail.title,
     heading: detail.heading ?? detail.title,
@@ -78,6 +80,7 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
     relatedService: "Related service",
     back: "Back to company portfolio",
     home: "Home",
+    imageNote: "Representative project-environment image",
   };
 
   const path = kind === "service" ? (arabic ? `/ar/${detail.slug}` : `/${detail.slug}`) : (arabic ? `/ar/projects/${detail.slug}` : `/projects/${detail.slug}`);
@@ -131,7 +134,9 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
   }
   const jsonLd = { "@context": "https://schema.org", "@graph": structuredGraph };
   const imageAlt = kind === "project"
-    ? `${copy.title} — documented PMTE project in ${arabic ? detail.ar.location ?? detail.location : detail.location}`
+    ? detail.imageType === "representative"
+      ? `${copy.imageNote} for ${copy.title}`
+      : `${copy.title} — documented PMTE project in ${arabic ? detail.ar.location ?? detail.location : detail.location}`
     : `${copy.title} — PMTE heavy equipment and contracting services`;
 
   return <main className={`seo-page ${arabic ? "arabic-page" : ""}`} dir={arabic ? "rtl" : "ltr"} lang={arabic ? "ar" : "en"}>
@@ -142,7 +147,7 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
       <div className="seo-hero-shade" aria-hidden="true" />
       <div className="seo-hero-content">
         <nav className="seo-breadcrumbs" aria-label={arabic ? "مسار الصفحة" : "Breadcrumb"}><a href={arabic ? "/ar" : "/"}>{copy.home}</a><span>/</span><a href={`${categoryPath}${kind === "project" ? "#projects" : "#services"}`}>{copy.category}</a></nav>
-        <p className="section-kicker">{copy.label}</p><h1>{copy.heading}</h1><p>{copy.intro}</p>
+        <p className="section-kicker">{copy.label}</p><h1>{copy.heading}</h1><p>{copy.intro}</p>{kind === "project" && detail.imageType === "representative" ? <p className="seo-image-note">{copy.imageNote}</p> : null}
       </div>
     </section>
 

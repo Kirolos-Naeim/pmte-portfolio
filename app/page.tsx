@@ -4,6 +4,7 @@ import { StickyNav } from "./StickyNav";
 import { CertificateLibrary } from "./CertificateLibrary";
 import { StatsValue } from "./StatsValue";
 import { OptimizedImage } from "./OptimizedImage";
+import { HeroMedia } from "./HeroMedia";
 
 const capabilities = [
   { code: "01", title: "Demolition & Decommissioning", href: "/demolition-company-abu-dhabi", Icon: Hammer, copy: "Structural demolition, controlled dismantling, building removal and decommissioning support for urban and industrial sites." },
@@ -17,17 +18,17 @@ const capabilities = [
 ];
 
 const projects = [
-  { title: "ADNEC · Phases 1–4", href: "/projects/adnec-demolition-phases", location: "Abu Dhabi", scope: "Multi-phase demolition and removal", sector: "Exhibition & events", image: "/assets/projects/gallery-015-p15-01.jpg" },
+  { title: "ADNEC · Phases 1–4", href: "/projects/adnec-demolition-phases", location: "Abu Dhabi", scope: "Multi-phase demolition and removal", sector: "Exhibition & events", image: "/assets/projects/representative/adnec-demolition-representative.png", visual: "representative" },
   { title: "Mina Plaza Demolition", href: "/projects/mina-plaza-demolition", location: "Mina Zayed, Abu Dhabi", scope: "Controlled high-rise demolition support", sector: "Urban redevelopment", image: "/assets/projects/mina-plaza-aerial-before-demolition.jpg" },
-  { title: "KMART Abu Dhabi", href: "/projects/kmart-abu-dhabi-demolition", location: "Abu Dhabi", scope: "Building demolition and clearance", sector: "Commercial", image: "/assets/projects/gallery-025-p21-01.jpg" },
-  { title: "Mina Zayed Buildings", href: "/projects/mina-zayed-buildings-removal", location: "Mina Zayed, Abu Dhabi", scope: "Building removal and site levelling", sector: "Urban redevelopment", image: "/assets/projects/gallery-035-p28-01.jpg" },
+  { title: "KMART Abu Dhabi", href: "/projects/kmart-abu-dhabi-demolition", location: "Abu Dhabi", scope: "Building demolition and clearance", sector: "Commercial", image: "/assets/projects/representative/kmart-demolition-representative.png", visual: "representative" },
+  { title: "Mina Zayed Buildings", href: "/projects/mina-zayed-buildings-removal", location: "Mina Zayed, Abu Dhabi", scope: "Building removal and site levelling", sector: "Urban redevelopment", image: "/assets/projects/representative/mina-zayed-buildings-representative.png", visual: "representative" },
   { title: "Mina Zayed Harbour", href: "/projects/mina-zayed-harbour-marine-works", location: "Abu Dhabi", scope: "Underwater concrete-block removal", sector: "Marine", image: "/assets/projects/gallery-049-p39-01.jpg" },
   { title: "Shoreline Rock Arrangement", href: "/projects/shoreline-rock-arrangement", location: "Abu Dhabi", scope: "Shoreline arrangement and marine support", sector: "Marine", image: "/assets/projects/gallery-051-p40-01.jpg" },
   { title: "Saadiyat Bridge Wall", href: "/projects/saadiyat-bridge-wall-demolition", location: "Saadiyat, Abu Dhabi", scope: "Wall demolition", sector: "Infrastructure", image: "/assets/projects/gallery-027-p23-01.jpg" },
-  { title: "Saif Bin Darwish Warehouse", href: "/projects/saif-bin-darwish-warehouse-demolition", location: "Abu Dhabi", scope: "Warehouse demolition", sector: "Industrial", image: "/assets/projects/gallery-026-p22-01.jpg" },
-  { title: "Al Ain Zoo", href: "/projects/al-ain-zoo-earthworks", location: "Al Ain", scope: "Cut, fill, demolition and excavation", sector: "Public realm", image: "/assets/projects/gallery-069-p54-01.jpg" },
+  { title: "Saif Bin Darwish Warehouse", href: "/projects/saif-bin-darwish-warehouse-demolition", location: "Abu Dhabi", scope: "Warehouse demolition", sector: "Industrial", image: "/assets/projects/representative/warehouse-demolition-representative.png", visual: "representative" },
+  { title: "Al Ain Zoo", href: "/projects/al-ain-zoo-earthworks", location: "Al Ain", scope: "Cut, fill, demolition and excavation", sector: "Public realm", image: "/assets/projects/representative/al-ain-earthworks-representative.png", visual: "representative" },
   { title: "Fisherman’s Wharf · Phase 1B", href: "/projects/fishermans-wharf-phase-1b", location: "Mina Zayed, Abu Dhabi", scope: "Demolition and foundation removal", sector: "Waterfront redevelopment", image: "/assets/projects/gallery-052-p40-02.jpg" },
-  { title: "Regional Ground Works", href: "/projects/regional-ground-works", location: "Madinat Zayed · Ghayathi · Al Ain", scope: "Ground works and site preparation", sector: "Infrastructure", image: "/assets/projects/gallery-060-p45-01.jpg" },
+  { title: "Regional Ground Works", href: "/projects/regional-ground-works", location: "Madinat Zayed · Ghayathi · Al Ain", scope: "Ground works and site preparation", sector: "Infrastructure", image: "/assets/projects/representative/regional-ground-works-representative.png", visual: "representative" },
   { title: "ADEC School Works", href: "/projects/adec-school-demolition", location: "Abu Dhabi", scope: "School demolition and removal work", sector: "Education", image: "/assets/projects/gallery-055-p42-01.jpg" },
 ];
 
@@ -70,7 +71,7 @@ export default function Home() {
       <StickyNav />
       <MotionEffects />
       <section className="hero print-cover" id="home">
-        <OptimizedImage className="hero-photo" src="/hero.jpg" alt="PMTE demolition excavator working at a building site in Abu Dhabi" fetchPriority="high" loading="eager" widths={[768, 1280, 1920]} quality={88} />
+        <HeroMedia />
         <div className="hero-shade" aria-hidden="true" />
         <div className="hero-content">
           <p className="portfolio-tag"><span>Company Portfolio</span><b>2026</b></p>
@@ -93,7 +94,7 @@ export default function Home() {
       <section className="projects-section section-shell print-page" id="projects">
         <div className="section-index">03 · Featured projects</div>
         <div className="split-heading"><div><p className="section-kicker">Selected experience</p><h2>Documented work.<br /><span>Defined scope.</span></h2></div><p>Project names and scopes reflect the supplied company portfolio. No contract values, completion percentages or performance metrics have been added.</p></div>
-        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><OptimizedImage src={project.image} alt={`${project.title} — ${project.scope} project in ${project.location}`} loading="lazy" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, (max-width: 1280px) 50vw, 33vw" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="project-body"><p>{project.sector}</p><h3><a href={project.href}>{project.title}</a></h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
+        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-image"><OptimizedImage src={project.image} alt={project.visual ? `Representative project environment for ${project.title}` : `${project.title} — ${project.scope} project in ${project.location}`} loading="lazy" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, (max-width: 1280px) 50vw, 33vw" /><span>{String(index + 1).padStart(2, "0")}</span>{project.visual ? <small className="project-image-note">Representative image</small> : null}</div><div className="project-body"><p>{project.sector}</p><h3><a href={project.href}>{project.title}</a></h3><dl><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Scope</dt><dd>{project.scope}</dd></div></dl></div></article>)}</div>
       </section>
 
       <section className="clients-section" id="clients"><div className="section-shell">
