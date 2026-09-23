@@ -478,10 +478,13 @@ h1 span { color: #c9cdd2; }
   .scroll-nav { grid-template-columns: 1fr auto; min-height: 66px; }
   .scroll-nav-brand img { width: 180px; }
   .scroll-nav-toggle { display: grid; }
-  .scroll-nav nav { position: absolute; top: 100%; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 12px 20px 20px; border-bottom: 1px solid rgba(255,255,255,.16); background: #181818; }
-  .scroll-nav nav.is-open { display: grid; }
-  .scroll-nav nav > a { justify-content: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.11); }
-  .scroll-nav-contact { justify-content: center !important; width: fit-content; margin-top: 14px; padding: 11px 14px !important; border-bottom: 1px solid var(--red) !important; }
+  .scroll-nav nav { position: absolute; top: calc(100% + 8px); right: clamp(20px, 4vw, 68px); left: auto; display: none; width: max-content; min-width: min(230px, calc(100vw - 40px)); max-width: calc(100vw - 40px); max-height: calc(100dvh - 100px); overflow-y: auto; align-items: stretch; justify-content: stretch; gap: 0; padding: 8px; border: 1px solid rgba(255,255,255,.16); background: #181818; box-shadow: 0 12px 28px rgba(0,0,0,.24); }
+  .scroll-nav nav.is-open { display: flex; flex-direction: column; }
+  .scroll-nav nav > a { flex-shrink: 0; justify-content: flex-start; min-height: 44px; padding: 12px; font-size: 13px; line-height: 1.4; letter-spacing: .02em; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .scroll-nav nav > a:hover, .scroll-nav nav > a:focus-visible { background: rgba(255,255,255,.06); color: white; }
+  .scroll-nav nav > a:focus-visible, .scroll-nav-toggle:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+  .scroll-nav nav > a svg { flex-shrink: 0; width: 17px; height: 17px; }
+  .scroll-nav-contact { justify-content: center !important; width: 100%; margin-top: 8px; padding: 11px 14px !important; border-bottom: 1px solid var(--red) !important; }
   .site-header { grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
   .route-header { grid-template-columns: 1fr auto; min-height: 96px; }
@@ -504,6 +507,7 @@ h1 span { color: #c9cdd2; }
   .motion-reveal, .motion-reveal.is-revealed { opacity: 1; transform: none; transition: none; }
   .project-card, .capability-card { transform: none; }
   .scroll-nav { padding: 9px 20px; }
+  .scroll-nav nav { right: 20px; }
   .scroll-nav-brand img { width: 164px; }
   .section-shell { padding: 78px 20px; }
   .seo-hero { min-height: 540px; }

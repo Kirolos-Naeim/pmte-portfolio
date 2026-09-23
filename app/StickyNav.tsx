@@ -1,7 +1,7 @@
 "use client";
 
 import { BadgeCheck, Building2, HardHat, Home, Images, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const content = {
   en: { home: "Home", about: "About", services: "Core capabilities", projects: "Projects", gallery: "Gallery", credentials: "Credentials", contact: "Contact PMTE", language: "العربية" },
@@ -11,6 +11,8 @@ const content = {
 export function StickyNav({ locale = "en", alwaysSolid = false }: { locale?: "en" | "ar"; alwaysSolid?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const copy = content[locale];
   const isArabic = locale === "ar";
   const anchorRoot = alwaysSolid ? (isArabic ? "/ar" : "/") : "";
@@ -22,10 +24,37 @@ export function StickyNav({ locale = "en", alwaysSolid = false }: { locale?: "en
     return () => window.removeEventListener("scroll", update);
   }, []);
 
-  return <header className={`scroll-nav is-visible ${alwaysSolid || scrolled ? "is-scrolled" : "is-over-hero"}`} dir="ltr">
-    <a className="scroll-nav-brand" href={alwaysSolid ? (isArabic ? "/ar" : "/") : "#home"} aria-label="PMTE home"><img src="/assets/logo/pmte-logo-primary.png" alt="PMTE demolition company Abu Dhabi logo" /></a>
-    <button className="scroll-nav-toggle" type="button" aria-expanded={menuOpen} aria-controls="scrollNavLinks" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}<span className="sr-only">Toggle navigation</span></button>
-    <nav className={menuOpen ? "is-open" : ""} id="scrollNavLinks" aria-label="PMTE navigation">
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOutside = (event: PointerEvent) => {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) setMenuOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    const desktop = window.matchMedia("(min-width: 1361px)");
+    const closeOnDesktop = () => { if (desktop.matches) setMenuOpen(false); };
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("keydown", closeOnEscape);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("keydown", closeOnEscape);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [menuOpen]);
+
+  return <header ref={headerRef} className={`scroll-nav is-visible ${alwaysSolid || scrolled ? "is-scrolled" : "is-over-hero"}`} dir="ltr" onBlur={(event) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setMenuOpen(false);
+  }}>
+    <a className="scroll-nav-brand" href={alwaysSolid ? (isArabic ? "/ar" : "/") : "#home"} aria-label="PMTE home" onClick={() => setMenuOpen(false)}><img src="/assets/logo/pmte-logo-primary.png" alt="PMTE demolition company Abu Dhabi logo" /></a>
+    <button ref={toggleRef} className="scroll-nav-toggle" type="button" aria-expanded={menuOpen} aria-controls="scrollNavLinks" onClick={() => setMenuOpen((open) => !open)}>{menuOpen ? <X /> : <Menu />}<span className="sr-only">{isArabic ? (menuOpen ? "إغلاق القائمة" : "فتح القائمة") : (menuOpen ? "Close navigation" : "Open navigation")}</span></button>
+    <nav className={menuOpen ? "is-open" : ""} id="scrollNavLinks" aria-label="PMTE navigation" onClick={(event) => {
+      if (event.target instanceof Element && event.target.closest("a")) setMenuOpen(false);
+    }}>
       <a href={`${anchorRoot}#home`}><Home />{copy.home}</a>
       <a href={isArabic ? `${anchorRoot}#about` : "/about"}><Building2 />{copy.about}</a>
       <a href={`${anchorRoot}#services`}><HardHat />{copy.services}</a>
