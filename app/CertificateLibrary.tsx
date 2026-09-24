@@ -21,10 +21,10 @@ export function CertificateLibrary({ certificates, guinnessImage, locale = "en" 
   const arabic = locale === "ar";
   const copy = arabic ? {
     evidence: "دليل الإنجاز", guinness: "شهادة غينيس للأرقام القياسية.", description: "توثق الشهادة شركة مدن العقارية بالاشتراك مع بتروليوم ماشينري آند تكنيكال إكويبمنت، أبوظبي، لعملية الهدم المنضبط بتاريخ 27 نوفمبر 2020.",
-    library: "مكتبة المستندات", previews: "معاينات الشهادات.", select: "اختر شهادة لعرض مستند OneDrive المقدم داخل هذا الموقع. أعد التحقق من كل مستند قبل أي تقديم رسمي.", preview: "معاينة", heading: "معاينة الشهادة", close: "إغلاق معاينة الشهادة",
+    library: "مكتبة المستندات", previews: "معاينات الشهادات.", preview: "معاينة", heading: "معاينة الشهادة", close: "إغلاق معاينة الشهادة",
   } : {
     evidence: "Achievement evidence", guinness: "Guinness World Records certificate.", description: "The certificate records Modon Properties in association with Petroleum Machinery and Technical Equipment, Abu Dhabi, for the controlled demolition on 27 November 2020.",
-    library: "Shared document library", previews: "Certificate previews.", select: "Select a certificate to view its supplied OneDrive document inside this website. Revalidate every item before a formal submission.", preview: "Preview", heading: "Certificate preview", close: "Close certificate preview",
+    library: "Company certificates", previews: "Certificate previews.", preview: "Preview", heading: "Certificate preview", close: "Close certificate preview",
   };
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export function CertificateLibrary({ certificates, guinnessImage, locale = "en" 
         <div><p className="section-kicker">{copy.evidence}</p><h3>{copy.guinness}</h3><p>{copy.description}</p><span className="certificate-view-icon" aria-label={copy.preview}><ArrowUpRight aria-hidden="true" /></span></div>
       </button>
       <div className="certificate-library">
-        <div><p className="section-kicker">{copy.library}</p><h3>{copy.previews}</h3><p>{copy.select}</p></div>
+        <div><p className="section-kicker">{copy.library}</p><h3>{copy.previews}</h3></div>
         <div className="certificate-list">{certificates.map((certificate) => <button key={certificate.name} type="button" onClick={() => setSelected(certificate)}><span>PDF</span>{certificate.name}<b aria-label={`${copy.preview} ${certificate.name}`}><ArrowUpRight aria-hidden="true" /></b></button>)}</div>
       </div>
       {selected && createPortal(

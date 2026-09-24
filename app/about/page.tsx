@@ -3,7 +3,7 @@ import { FileDown } from "lucide-react";
 import { StatsValue } from "../StatsValue";
 import { StickyNav } from "../StickyNav";
 
-const facts = [["1994", "Establishment year"], ["Public + private", "Project sectors"], ["8", "Licensed activities"], ["25+", "Vehicles and machines recorded in the source profile"]];
+const facts = [["1994", "Establishment year"], ["Public + private", "Project sectors"], ["8", "Licensed activities"], ["25+", "Recorded vehicles and machines"]];
 
 export const metadata: Metadata = {
   title: "About PMTE: Abu Dhabi Demolition Contractor",

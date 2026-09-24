@@ -22,7 +22,7 @@ export const services = [
       { title: "Clearance and handover", text: "Coordinate debris clearing, approved waste transport, grading or preparation required by the agreed scope." },
     ],
     faq: [
-      { question: "Does PMTE provide demolition services in Abu Dhabi?", answer: "Yes. PMTE is based in Musaffah, Abu Dhabi, and its supplied portfolio documents demolition and removal work across Abu Dhabi and Al Ain." },
+      { question: "Does PMTE provide demolition services in Abu Dhabi?", answer: "Yes. PMTE is based in Musaffah, Abu Dhabi, and its project experience includes demolition and removal work across Abu Dhabi and Al Ain." },
       { question: "What demolition work is covered?", answer: "Documented capabilities include controlled demolition, decommissioning, building removal, structural dismantling, concrete cutting, asphalt removal, debris clearing and related site preparation." },
       { question: "Can PMTE support demolition with heavy equipment?", answer: "PMTE records excavators, wheel loaders, cranes, graders, dump trucks, trailers, cutting equipment and demolition attachments for project-specific mobilisation." },
     ],
@@ -58,8 +58,8 @@ export const services = [
     intro: "Project-specific equipment support for demolition, earthworks and industrial operations.",
     scope: ["Excavators and demolition attachments", "Wheel loaders, cranes and dump trucks", "Concrete-cutting and material-handling equipment", "Technical supply and site mobilisation support"],
     paragraphs: [
-      "PMTE's supplied company profile records more than 25 vehicles and machines supporting demolition, excavation, transport, lifting and site operations in the UAE. The fleet categories include excavators, wheel loaders, mobile cranes, graders, dump trucks, trailers, cutting equipment and demolition attachments.",
-      "Verified models shown in the source portfolio include the Caterpillar 340 D2 L excavator and LiuGong 856H wheel loader. The website does not publish unverified quantities, performance ratings or specifications.",
+      "PMTE's recorded fleet includes more than 25 vehicles and machines supporting demolition, excavation, transport, lifting and site operations in the UAE. The fleet categories include excavators, wheel loaders, mobile cranes, graders, dump trucks, trailers, cutting equipment and demolition attachments.",
+      "Equipment includes the Caterpillar 340 D2 L excavator and LiuGong 856H wheel loader.",
       "Equipment requirements are assessed against the work scope, structure, material, access, reach, attachment need, lifting interface, debris flow and transport plan. Contact PMTE to confirm current availability and the appropriate contracting or supply arrangement for a project.",
     ],
     process: [
@@ -69,9 +69,9 @@ export const services = [
       { title: "Support the operation", text: "Maintain field coordination around the agreed equipment and technical-support scope." },
     ],
     faq: [
-      { question: "What demolition equipment is recorded by PMTE?", answer: "The supplied profile records excavators, demolition attachments, wheel loaders, cranes, graders, dump trucks, trailers, cutting equipment and material-handling support." },
-      { question: "Which equipment models are verified?", answer: "The source portfolio specifically identifies a Caterpillar 340 D2 L excavator and a LiuGong 856H wheel loader." },
-      { question: "Does this page guarantee equipment availability or rental?", answer: "No. Availability and the applicable contracting, operated-equipment or technical-supply arrangement must be confirmed directly with PMTE for each project." },
+      { question: "What demolition equipment is recorded by PMTE?", answer: "PMTE’s equipment includes excavators, demolition attachments, wheel loaders, cranes, graders, dump trucks, trailers, cutting equipment and material-handling support." },
+      { question: "Which equipment models does PMTE use?", answer: "Equipment includes a Caterpillar 340 D2 L excavator and a LiuGong 856H wheel loader." },
+      { question: "How can I check equipment availability?", answer: "Contact PMTE to discuss equipment availability and the contracting, operated-equipment or technical-supply arrangement for your project." },
     ],
     relatedProjects: ["mina-plaza-demolition", "al-ain-zoo-earthworks", "regional-ground-works", "mina-zayed-buildings-removal"],
     image: "/assets/equipment/excavator-demolition.jpg",
@@ -81,7 +81,7 @@ export const services = [
       scope: ["حفارات وملحقات هدم", "لودرات بعجلات ورافعات وشاحنات قلاب", "معدات قطع الخرسانة ومناولة المواد", "إمدادات فنية ودعم تجهيز المواقع"],
       paragraphs: [
         "يسجل ملف PMTE أكثر من 25 مركبة ومعدة لدعم الهدم والحفريات والنقل والرفع وعمليات المواقع في الإمارات، وتشمل الفئات الحفارات واللودرات بعجلات والرافعات المتحركة والجريدرات والشاحنات القلاب والمقطورات ومعدات القطع وملحقات الهدم.",
-        "تشمل الطرازات الموثقة في الملف حفارة Caterpillar 340 D2 L ولودر LiuGong 856H، ولا ينشر الموقع كميات أو مؤشرات أداء أو مواصفات غير مثبتة بالمصادر.",
+        "تشمل المعدات حفارة Caterpillar 340 D2 L ولودر LiuGong 856H.",
         "تُراجع متطلبات المعدات وفق نطاق العمل والمنشأ والمواد والوصول والمدى والملحقات وأعمال الرفع وتدفق الأنقاض وخطة النقل. يجب التواصل مع PMTE لتأكيد التوافر الحالي وترتيب المقاولة أو الإمداد المناسب للمشروع.",
       ],
       process: [
@@ -92,8 +92,8 @@ export const services = [
       ],
       faq: [
         { question: "ما معدات الهدم المسجلة لدى PMTE؟", answer: "يسجل الملف حفارات وملحقات هدم ولودرات بعجلات ورافعات وجريدرات وشاحنات قلاب ومقطورات ومعدات قطع ودعم مناولة المواد." },
-        { question: "ما طرازات المعدات الموثقة؟", answer: "يحدد الملف حفارة Caterpillar 340 D2 L ولودر بعجلات LiuGong 856H." },
-        { question: "هل تضمن الصفحة توافر المعدات أو التأجير؟", answer: "لا. يجب تأكيد التوافر وترتيب المقاولة أو المعدات المشغلة أو الإمداد الفني مباشرة مع PMTE لكل مشروع." },
+        { question: "ما طرازات المعدات التي تستخدمها PMTE؟", answer: "تشمل المعدات حفارة Caterpillar 340 D2 L ولودر بعجلات LiuGong 856H." },
+        { question: "كيف يمكنني الاستفسار عن توافر المعدات؟", answer: "تواصل مع PMTE لمناقشة توافر المعدات وترتيب المقاولة أو المعدات المشغلة أو الإمداد الفني المناسب لمشروعك." },
       ],
     },
   },
@@ -105,7 +105,7 @@ export const services = [
     intro: "Practical support for harbour, shoreline and waterfront project scopes.",
     scope: ["Underwater concrete-block removal", "Harbour and waterfront support", "Shoreline rock arrangement", "Marine site preparation and clearance"],
     paragraphs: [
-      "PMTE provides marine and waterfront project support from Abu Dhabi. The supplied portfolio documents work at Mina Zayed Harbour, shoreline rock-arrangement activities and demolition and foundation removal at Mina Zayed Fisherman's Wharf Phase 1B.",
+      "PMTE provides marine and waterfront project support from Abu Dhabi. PMTE’s experience includes work at Mina Zayed Harbour, shoreline rock-arrangement activities and demolition and foundation removal at Mina Zayed Fisherman's Wharf Phase 1B.",
       "Marine scopes require coordination between access, lifting, underwater or shoreline activity, material handling, transport and the condition required for handover. PMTE combines relevant equipment and field support around the defined project scope.",
       "The company also supports adjacent demolition, excavation, debris-clearing and technical-supply requirements where they form part of a harbour or waterfront assignment.",
     ],
@@ -164,7 +164,7 @@ export const services = [
     ],
     faq: [
       { question: "Which earthworks services does PMTE provide?", answer: "Documented capabilities include excavation, cut-and-fill, grading, ground clearing, site preparation and coordinated transport support." },
-      { question: "Where has PMTE completed documented ground work?", answer: "The supplied portfolio records work at Al Ain Zoo and regional ground works in Madinat Zayed, Ghayathi and Al Ain." },
+      { question: "Where has PMTE completed documented ground work?", answer: "PMTE’s project experience includes work at Al Ain Zoo and regional ground works in Madinat Zayed, Ghayathi and Al Ain." },
       { question: "Can earthworks be coordinated with demolition?", answer: "Yes. PMTE's portfolio includes assignments combining demolition, excavation, site levelling, debris clearing and preparation within a defined project scope." },
     ],
     relatedProjects: ["al-ain-zoo-earthworks", "regional-ground-works", "mina-zayed-buildings-removal", "adec-school-demolition"],
