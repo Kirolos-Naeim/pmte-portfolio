@@ -1,100 +1,53 @@
-# vinext-starter
+# PMTE company portfolio
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+English and Arabic corporate website for Petroleum Machinery and Technical
+Equipment - L.L.C. - S.P.C., Abu Dhabi. Production: https://petrolum.ae/.
 
-## Prerequisites
+## Local development
 
-- Node.js `>=22.13.0`
-
-## Quick Start
+Use Node.js 22.13 or later and pnpm 10. The committed `pnpm-lock.yaml` is the
+dependency lockfile; do not generate a second npm lockfile.
 
 ```bash
-npm install
-npm run dev
-npm run build
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-This starter does not use `wrangler.jsonc`.
+Open the local address printed by the development server.
 
-## Included Shape
-
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-Signed-in visitors receive both `oai-authenticated-user-id` and `oai-authenticated-user-email`. Private Sites require every visitor to sign in; public Sites may also have anonymous visitors, for whom neither header is present.
-
-The user ID is stable for the same user on the same Site and different across Sites. Email and name are intended for display or contact purposes.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const userId = requestHeaders.get("oai-authenticated-user-id");
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```bash
+pnpm test
+pnpm build
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+The test checks local media references, gallery entries, and essential public
+downloads/SEO files. The build separately checks that the application bundles.
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+## Project structure
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+- `app/`: routes, components, styling, English/Arabic copy and SEO data.
+- `app/gallery-manifest.json`: gallery photographs and captions.
+- `public/assets/`: active logos, client images, project/equipment photographs,
+  certificates, social image and hero video. This is the website's asset source.
+- `public/PMTE-Company-Portfolio-2026.pdf`: the live downloadable portfolio.
+- `public/robots.txt`, `public/sitemap.xml`, `public/llms.txt`: public crawler files.
+- `DESIGN.md`, `PMTE_Company_Portfolio.md`: design and portfolio content sources.
+- `ASSET_CREDITS.md`: media provenance and representative-image notes.
+- `tests/`: asset integrity checks.
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+Gallery photos can remain in use even when they are no longer homepage card
+images. Check both the manifest and page data before deleting media. AI-generated
+representative images must retain their disclosure and must not be described as
+photographs of completed projects.
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+## Deployment
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+Netlify uses `netlify.toml` and the Nitro adapter in `vite.config.ts` to build
+server-rendered routes as well as client assets. Keep that configuration; simply
+publishing client assets alone will not serve all routes.
 
-## Useful Commands
+The Cloudflare worker and `.openai/hosting.json` remain required by the local
+development/Sites configuration. They are not unused database scaffolding.
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+Dependencies, build output, temporary exports and local environment files are
+ignored by Git. Never commit credentials or `.env` files.

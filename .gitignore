@@ -11,7 +11,6 @@
 !.yarn/releases
 !.yarn/versions
 /package-lock.json
-/pnpm-lock.yaml
 
 # testing
 /coverage
@@ -46,6 +45,7 @@ yarn-error.log*
 
 /.wrangler/
 /outputs/
+/output/
 /work/
 tmp/
 /.netlify/
