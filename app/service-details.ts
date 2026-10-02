@@ -1,0 +1,103 @@
+// These pages cover distinct, documented activities, not keyword-only variants.
+export const additionalServices = [
+  {
+    slug: "concrete-cutting-asphalt-removal-abu-dhabi",
+    title: "Concrete Cutting & Asphalt Removal Abu Dhabi",
+    heading: "Concrete Cutting and Removal in Abu Dhabi",
+    description: "PMTE provides concrete cutting, controlled breaking and asphalt removal in Abu Dhabi as part of defined demolition and site-preparation scopes.",
+    intro: "Defined removal limits. Coordinated cutting, breaking and clearance.",
+    image: "/assets/equipment/excavator-demolition.jpg",
+    scope: ["Concrete cutting and structural sawing", "Controlled concrete breaking and removal", "Asphalt removal", "Coordination with demolition and site clearance"],
+    paragraphs: [
+      "Concrete cutting and concrete demolition address different parts of a removal scope. Cutting defines a separation or opening; breaking and removal address material that is to be taken out. PMTE's capabilities include concrete cutting, controlled breaking and asphalt removal for Abu Dhabi project sites.",
+      "A quotation should identify what must be removed and what must remain. Provide drawings or photographs, material details where available, access restrictions and the required condition after removal. Reinforced concrete, nearby structures and site operations affect the proposed sequence and equipment selection.",
+      "Wall demolition is recorded at Saadiyat Bridge, while demolition and foundation removal are recorded at Mina Zayed Fisherman's Wharf Phase 1B. These are examples of PMTE's removal experience; the portfolio does not specify a cutting method for either project.",
+    ],
+    process: [
+      { title: "Identify removal limits", text: "Share the location, drawings and elements to remove or retain." },
+      { title: "Review access and interfaces", text: "Identify adjacent structures, ongoing activities and access constraints for review." },
+      { title: "Agree the scope", text: "Confirm the cutting, breaking, removal and transport responsibilities before mobilisation." },
+      { title: "Coordinate clearance", text: "Include debris handling and the required handover condition in the agreed work scope." },
+    ],
+    faq: [
+      { question: "Does PMTE provide concrete cutting in Abu Dhabi?", answer: "Yes. Concrete cutting and asphalt removal are included in PMTE's capabilities. Contact the team with the site location and removal requirements to discuss a defined scope." },
+      { question: "Can concrete removal be combined with excavation?", answer: "Concrete or foundation removal can be coordinated with excavation and site preparation where included in the agreed contract. Confirm which materials must be removed and the required final level." },
+      { question: "What information is needed for an asphalt removal quotation?", answer: "Send the site location, approximate area, available thickness information, access details and photographs. Specify whether loading, transport and preparation of the underlying area are required." },
+    ],
+    relatedProjects: ["saadiyat-bridge-wall-demolition", "fishermans-wharf-phase-1b"],
+    ar: {
+      title: "قص الخرسانة وإزالة الأسفلت في أبوظبي",
+      heading: "قص وتكسير وإزالة الخرسانة في أبوظبي",
+      description: "تقدم PMTE خدمات قص الخرسانة والتكسير المنضبط وإزالة الأسفلت في أبوظبي ضمن نطاقات محددة للهدم وتجهيز المواقع.",
+      intro: "حدود إزالة واضحة وتنسيق لأعمال القطع والتكسير ورفع المخلفات.",
+      scope: ["قص الخرسانة والنشر الإنشائي", "تكسير وإزالة الخرسانة بصورة منضبطة", "إزالة الأسفلت", "التنسيق مع أعمال الهدم وتنظيف الموقع"],
+      paragraphs: [
+        "يختلف قص الخرسانة عن تكسيرها وإزالتها: يحدد القطع موضع الفصل أو الفتحة، بينما يستهدف التكسير والإزالة المواد المطلوب إخراجها من الموقع. تشمل قدرات PMTE قص الخرسانة والتكسير المنضبط وإزالة الأسفلت في مواقع أبوظبي.",
+        "لإعداد عرض سعر واضح، يجب تحديد الأجزاء المطلوب إزالتها والأجزاء التي ستبقى. أرسل المخططات أو الصور وتفاصيل المواد المتاحة وقيود الوصول وحالة التسليم المطلوبة. تؤثر الخرسانة المسلحة والمنشآت المجاورة والأنشطة القائمة في تسلسل العمل واختيار المعدات.",
+        "يوثق ملف الشركة هدم جدار جسر السعديات والهدم وإزالة الأساسات في مرسى الصيادين بميناء زايد، المرحلة 1ب. توضح هذه الأعمال خبرة الشركة في الإزالة، دون أن يحدد الملف طريقة قطع الخرسانة المستخدمة في أي منهما.",
+      ],
+      process: [
+        { title: "تحديد حدود الإزالة", text: "أرسل الموقع والمخططات والعناصر المطلوب إزالتها أو الإبقاء عليها." },
+        { title: "مراجعة الوصول والتداخلات", text: "حدد المنشآت المجاورة والأنشطة القائمة وقيود الوصول للمراجعة." },
+        { title: "الاتفاق على النطاق", text: "حدد مسؤوليات القطع والتكسير والإزالة والنقل قبل التجهيز." },
+        { title: "تنسيق التنظيف", text: "أدرج مناولة الأنقاض وحالة التسليم المطلوبة ضمن نطاق العمل المتفق عليه." },
+      ],
+      faq: [
+        { question: "هل تقدم PMTE خدمات قص الخرسانة في أبوظبي؟", answer: "نعم، تشمل قدرات PMTE قص الخرسانة وإزالة الأسفلت. تواصل مع الفريق وأرسل موقع المشروع ومتطلبات الإزالة لمناقشة نطاق محدد." },
+        { question: "هل يمكن الجمع بين إزالة الخرسانة والحفريات؟", answer: "يمكن تنسيق إزالة الخرسانة أو الأساسات مع الحفريات وتجهيز الموقع عندما يشملها العقد المتفق عليه. يجب تحديد المواد المطلوب إزالتها والمنسوب النهائي المطلوب." },
+        { question: "ما المعلومات المطلوبة لعرض سعر إزالة الأسفلت؟", answer: "أرسل الموقع والمساحة التقريبية ومعلومات السماكة المتاحة وتفاصيل الوصول والصور، وحدد إن كان المطلوب يشمل التحميل والنقل وتجهيز المنطقة أسفل الأسفلت." },
+      ],
+    },
+  },
+  {
+    slug: "site-clearance-waste-transport-abu-dhabi",
+    title: "Site Clearance & Debris Removal Abu Dhabi",
+    heading: "Site Clearance and Demolition Waste Transport in Abu Dhabi",
+    description: "PMTE supports site clearance, rubble removal and construction-waste transportation in Abu Dhabi, coordinated with demolition and site preparation.",
+    intro: "From building removal to a clearly defined site handover.",
+    image: "/assets/projects/gallery-060-p45-01.jpg",
+    scope: ["Demolition debris clearing", "Rubble loading and transport coordination", "Construction-waste transportation", "Site levelling and preparation where specified"],
+    paragraphs: [
+      "Demolition is only one part of preparing a site for its next use. PMTE's capabilities include debris clearing and waste transportation, with excavation, grading and site preparation where these are included in the project scope.",
+      "For a site clearance enquiry in Musaffah or elsewhere in Abu Dhabi, identify the material type, estimated quantity if known, loading access and final condition required. Separate the removal of existing structures from the clearance of loose rubble so that the quotation addresses both tasks accurately.",
+      "PMTE's Mina Zayed buildings assignment records building removal and site levelling. Regional ground works are documented in Madinat Zayed, Ghayathi and Al Ain. These projects provide context for discussing combined removal and preparation requirements.",
+      "Confirm the accepted waste types, destination requirements and transport responsibilities for each assignment so that loading and transport are coordinated with the receiving facility.",
+    ],
+    process: [
+      { title: "Describe the material", text: "Provide photographs and identify debris, rubble or construction waste requiring removal." },
+      { title: "Review loading access", text: "Discuss truck access, loading space, site restrictions and surrounding activities." },
+      { title: "Define transport responsibilities", text: "Confirm the material acceptance and destination requirements for the agreed scope." },
+      { title: "Set the handover condition", text: "Specify whether the scope ends at clearance or also includes levelling and preparation." },
+    ],
+    faq: [
+      { question: "Can PMTE combine demolition and debris removal?", answer: "Yes. Building removal, debris clearing and waste transportation can form part of an agreed demolition scope. Confirm their inclusion when requesting a quotation." },
+      { question: "Does site clearance include land levelling?", answer: "Not automatically. Clearance removes specified material; levelling changes the ground profile. PMTE supports both activities, but the quotation should state which are included." },
+      { question: "What should I send for a rubble removal quotation in Abu Dhabi?", answer: "Send the location, photographs, material description, available quantity estimate and access details. State whether loading, transportation and final site preparation are required." },
+    ],
+    relatedProjects: ["mina-zayed-buildings-removal", "regional-ground-works", "kmart-abu-dhabi-demolition"],
+    ar: {
+      title: "تنظيف المواقع ورفع الأنقاض في أبوظبي",
+      heading: "تنظيف المواقع ونقل مخلفات الهدم في أبوظبي",
+      description: "تدعم PMTE تنظيف المواقع ورفع الأنقاض ونقل مخلفات الإنشاءات في أبوظبي بالتنسيق مع أعمال الهدم وتجهيز المواقع.",
+      intro: "من إزالة المباني إلى تسليم الموقع وفق متطلبات واضحة.",
+      scope: ["إزالة أنقاض الهدم", "تحميل الأنقاض وتنسيق النقل", "نقل مخلفات الإنشاءات", "تسوية وتجهيز الموقع عند إدراجهما في النطاق"],
+      paragraphs: [
+        "يمثل الهدم جزءاً من تجهيز الموقع لاستخدامه التالي. تشمل قدرات PMTE رفع الأنقاض ونقل المخلفات، مع الحفريات والتسوية وتجهيز الموقع عندما تكون ضمن نطاق المشروع.",
+        "عند الاستفسار عن تنظيف موقع في مصفح أو غيرها من مناطق أبوظبي، حدد نوع المواد وكميتها التقديرية إن توفرت وإمكانية التحميل وحالة التسليم المطلوبة. ميّز بين إزالة المنشآت القائمة ورفع الأنقاض المفككة ليغطي عرض السعر المهمتين بدقة.",
+        "تشمل أعمال PMTE في مباني ميناء زايد إزالة المباني وتسوية الموقع، كما يوثق الملف أعمالاً أرضية في مدينة زايد وغياثي والعين. توفر هذه المشاريع أمثلة لمناقشة متطلبات الإزالة والتجهيز المتكاملة.",
+        "يجب الاتفاق على أنواع المخلفات المقبولة ومتطلبات جهة الاستقبال ومسؤوليات النقل لكل مهمة لتنسيق التحميل والنقل مع المنشأة المستقبلة.",
+      ],
+      process: [
+        { title: "وصف المواد", text: "أرسل الصور وحدد الأنقاض أو مخلفات الإنشاءات المطلوب رفعها." },
+        { title: "مراجعة إمكانية التحميل", text: "ناقش وصول الشاحنات ومساحة التحميل وقيود الموقع والأنشطة المحيطة." },
+        { title: "تحديد مسؤوليات النقل", text: "أكد متطلبات قبول المواد وجهة الاستقبال للنطاق المتفق عليه." },
+        { title: "تحديد حالة التسليم", text: "حدد إن كان النطاق ينتهي بالتنظيف أو يشمل التسوية والتجهيز أيضاً." },
+      ],
+      faq: [
+        { question: "هل تجمع PMTE بين الهدم ورفع الأنقاض؟", answer: "نعم، يمكن أن يشمل نطاق الهدم المتفق عليه إزالة المباني ورفع الأنقاض ونقل المخلفات. أكد إدراج هذه الأعمال عند طلب عرض السعر." },
+        { question: "هل يشمل تنظيف الموقع تسوية الأرض؟", answer: "ليس تلقائياً؛ يزيل التنظيف المواد المحددة، بينما تغير التسوية مناسيب الأرض. تدعم PMTE النشاطين، لكن يجب توضيح ما يشمله عرض السعر." },
+        { question: "ما المطلوب لعرض سعر رفع الأنقاض في أبوظبي؟", answer: "أرسل الموقع والصور ووصف المواد والكميات التقديرية المتاحة وتفاصيل الوصول، وحدد الحاجة إلى التحميل والنقل والتجهيز النهائي للموقع." },
+      ],
+    },
+  },
+] as const;

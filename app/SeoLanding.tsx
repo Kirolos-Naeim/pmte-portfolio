@@ -2,6 +2,7 @@ import { ArrowRight, Check, MapPin, Phone } from "lucide-react";
 import { StickyNav } from "./StickyNav";
 import { OptimizedImage } from "./OptimizedImage";
 import { businessId, projects, services, siteUrl, websiteId } from "./seo-data";
+import { projectContext, serviceQuestions } from "./search-content";
 
 type TextBlock = { title: string; text: string };
 type Faq = { question: string; answer: string };
@@ -84,6 +85,8 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
   };
 
   const path = kind === "service" ? (arabic ? `/ar/${detail.slug}` : `/${detail.slug}`) : (arabic ? `/ar/projects/${detail.slug}` : `/projects/${detail.slug}`);
+  const paragraphs = [...(copy.paragraphs ?? []), ...(kind === "project" ? projectContext[detail.slug]?.[locale] ?? [] : [])];
+  const faqs = [...(copy.faq ?? []), ...(kind === "service" ? serviceQuestions[detail.slug]?.[locale] ?? [] : [])];
   const categoryPath = arabic ? "/ar" : "/";
   const relatedProjects = detail.relatedProjects?.map((slug) => projects.find((project) => project.slug === slug)).filter(Boolean) ?? [];
   const relatedService = detail.relatedServiceSlug ? services.find((service) => service.slug === detail.relatedServiceSlug) : undefined;
@@ -97,8 +100,6 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
     image: `${siteUrl}${detail.image}`,
     provider: { "@id": businessId },
     areaServed: { "@type": "Country", name: "United Arab Emirates" },
-    isPartOf: { "@id": websiteId },
-    availableLanguage: arabic ? "Arabic" : "English",
   } : {
     "@type": "Article",
     "@id": `${siteUrl}${path}#case-study`,
@@ -117,6 +118,16 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
   const structuredGraph: Record<string, unknown>[] = [
     pageEntity,
     {
+      "@type": "WebPage",
+      "@id": `${siteUrl}${path}#webpage`,
+      url: `${siteUrl}${path}`,
+      name: copy.title,
+      description: copy.description,
+      inLanguage: arabic ? "ar-AE" : "en-AE",
+      isPartOf: { "@id": websiteId },
+      mainEntity: { "@id": pageEntity["@id"] },
+    },
+    {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: copy.home, item: `${siteUrl}${arabic ? "/ar" : "/"}` },
@@ -125,11 +136,11 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
       ],
     },
   ];
-  if (copy.faq?.length) {
+  if (faqs.length) {
     structuredGraph.push({
       "@type": "FAQPage",
       "@id": `${siteUrl}${path}#faq`,
-      mainEntity: copy.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })),
+      mainEntity: faqs.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })),
     });
   }
   const jsonLd = { "@context": "https://schema.org", "@graph": structuredGraph };
@@ -152,7 +163,7 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
     </section>
 
     <section className="seo-content section-shell">
-      <div className="seo-summary"><p className="section-kicker">PMTE · Abu Dhabi · Established 1994</p><h2>{copy.scopeTitle}</h2><p>{copy.description}</p>{copy.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<a className="seo-contact-link" href={arabic ? "/ar#contact" : "/#contact"}><Phone aria-hidden="true" />{copy.contact}</a></div>
+      <div className="seo-summary"><p className="section-kicker">{arabic ? "PMTE · أبوظبي · تأسست عام 1994" : "PMTE · Abu Dhabi · Established 1994"}</p><h2>{copy.scopeTitle}</h2><p>{copy.description}</p>{paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<a className="seo-contact-link" href={arabic ? "/ar#contact" : "/#contact"}><Phone aria-hidden="true" />{copy.contact}</a>{kind === "project" && <p className="seo-source"><a href="/PMTE-Company-Portfolio-2026.pdf">{arabic ? "اطّلع على ملف الشركة وخبرات المشاريع (PDF)" : "View the company portfolio and project experience (PDF)"}</a></p>}</div>
       <aside className="seo-facts"><p><MapPin aria-hidden="true" /><span>{copy.location}</span>{detail.location ? (arabic ? detail.ar.location ?? detail.location : detail.location) : (arabic ? "أبوظبي، الإمارات العربية المتحدة" : "Abu Dhabi, UAE")}</p>{detail.sector && <p><Check aria-hidden="true" /><span>{copy.sector}</span>{arabic ? detail.ar.sector ?? detail.sector : detail.sector}</p>}<ul>{detail.scope?.map((item, index) => <li key={item}><Check aria-hidden="true" />{arabic ? detail.ar.scope?.[index] ?? item : item}</li>)}</ul></aside>
     </section>
 
@@ -162,7 +173,11 @@ export function SeoLanding({ detail, kind, locale = "en" }: { detail: Detail; ki
 
     {kind === "project" && relatedService ? <section className="seo-related-service section-shell"><div><p className="section-kicker">PMTE · {copy.relatedService}</p><h2>{arabic ? relatedService.ar.title : relatedService.title}</h2><p>{arabic ? relatedService.ar.description : relatedService.description}</p></div><a href={arabic ? `/ar/${relatedService.slug}` : `/${relatedService.slug}`}>{copy.relatedService}<ArrowRight aria-hidden="true" /></a></section> : null}
 
-    {copy.faq?.length ? <section className="seo-faq section-shell"><p className="section-kicker">PMTE · Abu Dhabi</p><h2>{copy.questions}</h2><div>{copy.faq.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div></section> : null}
+    {faqs.length ? <section className="seo-faq section-shell" id="faq"><p className="section-kicker">{arabic ? "PMTE · أبوظبي" : "PMTE · Abu Dhabi"}</p><h2>{copy.questions}</h2><div>{faqs.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div></section> : null}
+
+    <section className="seo-service-directory section-shell" aria-labelledby="related-services-title"><h2 id="related-services-title">{arabic ? "خدمات مرتبطة بمشروعك" : "Services for your project"}</h2><nav aria-label={arabic ? "خدمات PMTE" : "PMTE services"}>{services.filter((service) => kind !== "service" || service.slug !== detail.slug).map((service) => <a key={service.slug} href={`${arabic ? "/ar" : ""}/${service.slug}`}>{arabic ? service.ar.title : service.title}<ArrowRight aria-hidden="true" /></a>)}</nav></section>
+
+    {kind === "service" && <section className="seo-enquiry section-shell" id="quotation"><h2>{arabic ? "اطلب عرض سعر لمشروعك" : "Request a project quotation"}</h2><p>{arabic ? "أرسل الموقع والصور أو المخططات ونطاق الإزالة أو التجهيز وقيود الوصول والبرنامج المقترح. حدد إن كان المطلوب يشمل المعدات والتحميل ونقل المخلفات وتسوية الموقع." : "Send the site location, photographs or drawings, removal or preparation scope, access restrictions and proposed programme. Specify whether equipment, loading, waste transport and site levelling are required."}</p><div><a href="tel:+97126337709"><Phone aria-hidden="true" /><bdi>+971 2 633 7709</bdi></a><a href="mailto:petrolum@emirates.net.ae"><bdi>petrolum@emirates.net.ae</bdi></a></div></section>}
 
     <section className="seo-next section-shell"><div><p className="section-kicker">PMTE · Abu Dhabi</p><h2>{copy.contact}</h2><p>{copy.contactCopy}</p></div><a href={arabic ? "/ar" : "/"}>{copy.back}<ArrowRight aria-hidden="true" /></a></section>
   </main>;

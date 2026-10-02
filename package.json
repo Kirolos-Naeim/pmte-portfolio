@@ -10,6 +10,7 @@
     "build": "vinext build",
     "start": "vinext start",
     "test": "node --test tests/assets.test.mjs",
+    "test:seo": "node --test tests/seo.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
   "dependencies": {

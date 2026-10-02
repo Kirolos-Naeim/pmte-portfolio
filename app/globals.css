@@ -197,6 +197,20 @@ p { text-wrap: pretty; }
 .seo-faq summary::after { content: "+"; position: absolute; right: 4px; top: 20px; color: var(--red); font-size: 27px; font-weight: 400; }
 .seo-faq details[open] summary::after { content: "−"; }
 .seo-faq details p { max-width: 900px; margin: -4px 0 24px; color: var(--steel); font-size: 15px; line-height: 1.75; }
+.seo-faq summary:focus-visible, .seo-service-directory a:focus-visible, .seo-enquiry a:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+.seo-source { margin-top: 24px; }
+.seo-source a { text-decoration: underline; text-underline-offset: 4px; }
+.seo-service-directory { border-bottom: 1px solid var(--line); }
+.seo-service-directory h2, .seo-enquiry h2 { font-size: clamp(26px, 3vw, 42px); margin-bottom: 28px; line-height: 1.2; }
+.seo-service-directory nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); border-top: 1px solid var(--line); }
+.seo-service-directory a { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 20px; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.5; }
+.seo-service-directory a:hover { background: var(--pale, #F3F4F6); }
+.seo-service-directory svg, .seo-enquiry svg { width: 18px; height: 18px; flex: 0 0 auto; color: var(--red); }
+.arabic-page .seo-service-directory svg { transform: scaleX(-1); }
+.seo-enquiry { border-bottom: 1px solid var(--line); }
+.seo-enquiry p { max-width: 75ch; font-size: 16px; line-height: 1.8; color: var(--steel); }
+.seo-enquiry > div { display: flex; flex-wrap: wrap; gap: 18px 32px; margin-top: 24px; }
+.seo-enquiry a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 4px; }
 .capability-card h3 a, .project-card h3 a { color: inherit; text-decoration: none; }
 .capability-card h3 a:hover, .project-card h3 a:hover { color: var(--red); }
 .arabic-page .seo-hero-shade { background: linear-gradient(270deg, rgba(12,12,12,.96) 0%, rgba(12,12,12,.78) 48%, rgba(12,12,12,.25) 100%); }
@@ -233,6 +247,7 @@ h1 span { color: #c9cdd2; }
 .hero-stats strong { display: block; color: white; font-size: clamp(25px, 2.6vw, 40px); font-weight: 620; letter-spacing: -.04em; line-height: 1; }
 .hero-stats span { display: block; max-width: 170px; margin-top: 8px; color: #c9cdd2; font-family: var(--font-geist-mono), monospace; font-size: 8px; letter-spacing: .11em; line-height: 1.45; text-transform: uppercase; }
 .stat-value { font-variant-numeric: tabular-nums; }
+.hero-stats strong > span, .fact-grid strong > span { display: inline; max-width: none; margin: 0; color: inherit; font: inherit; letter-spacing: inherit; text-transform: none; }
 .stat-value.is-ready { animation: stat-settle .48s cubic-bezier(.22,.8,.24,1) both; }
 .stat-label { transition: color .28s ease, transform .28s cubic-bezier(.22,.8,.24,1); }
 .hero-stats div:hover .stat-label, .fact-grid article:hover .stat-label { color: var(--red); transform: translateX(3px); }

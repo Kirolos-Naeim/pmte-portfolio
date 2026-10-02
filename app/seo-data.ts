@@ -1,3 +1,5 @@
+import { additionalServices } from "./service-details";
+
 export const siteUrl = "https://petrolum.ae";
 export const businessId = `${siteUrl}/#business`;
 export const websiteId = `${siteUrl}/#website`;
@@ -5,9 +7,9 @@ export const websiteId = `${siteUrl}/#website`;
 export const services = [
   {
     slug: "demolition-company-abu-dhabi",
-    title: "Demolition Company in Abu Dhabi, UAE",
+    title: "Building Demolition Contractors Abu Dhabi",
     description: "PMTE is an Abu Dhabi demolition contractor for controlled demolition, decommissioning, structural dismantling, building removal and site clearance.",
-    heading: "Demolition Company in Abu Dhabi, UAE",
+    heading: "Building Demolition Contractors in Abu Dhabi",
     intro: "Controlled demolition, heavy equipment, earthworks and marine works since 1994.",
     scope: ["Controlled demolition and dismantling", "Building removal and site clearance", "Concrete cutting and controlled breaking", "Debris clearing and approved waste transport"],
     paragraphs: [
@@ -29,7 +31,7 @@ export const services = [
     relatedProjects: ["mina-plaza-demolition", "adnec-demolition-phases", "saadiyat-bridge-wall-demolition", "saif-bin-darwish-warehouse-demolition"],
     image: "/assets/projects/mina-plaza-demolition-excavator.jpg",
     ar: {
-      title: "شركة هدم في أبوظبي، الإمارات", heading: "شركة هدم في أبوظبي، الإمارات", intro: "هدم منضبط ومعدات ثقيلة وأعمال ترابية وبحرية منذ عام 1994.",
+      title: "مقاولات هدم المباني في أبوظبي", heading: "مقاولات هدم المباني في أبوظبي", intro: "هدم منضبط ومعدات ثقيلة وأعمال ترابية وبحرية منذ عام 1994.",
       description: "PMTE مقاول هدم في أبوظبي لأعمال الهدم المنضبط وإخراج المنشآت من الخدمة والتفكيك الإنشائي وإزالة المباني وتنظيف المواقع.",
       scope: ["الهدم والتفكيك المنضبط", "إزالة المباني وتنظيف الموقع", "قطع الخرسانة والتكسير المنضبط", "إزالة الأنقاض ونقل المخلفات إلى الجهات المعتمدة"],
       paragraphs: [
@@ -191,6 +193,7 @@ export const services = [
       ],
     },
   },
+  ...additionalServices,
 ] as const;
 
 export const projects = [
