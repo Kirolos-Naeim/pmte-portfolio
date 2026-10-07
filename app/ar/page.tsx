@@ -31,7 +31,7 @@ const clients = [
 ];
 
 const certificates = [
-  { name: "شهادة تصنيف الطاقة والقدرة · 2026", href: "https://1drv.ms/b/c/2cea8bedd36ce876/IQA1HtadzkveRY4CDj2WG6n2AdRvcMPv4KCU7W2Ie6Qco4E?e=gL2evX", embed: "https://1drv.ms/b/c/2cea8bedd36ce876/IQQ1HtadzkveRY4CDj2WG6n2ASAM6ARJ41544pYsBYTHjpc" },
+  { name: "شهادة تصنيف الطاقة والقدرة · 2026", href: "https://1drv.ms/b/c/2cea8bedd36ce876/IQA1HtadzkveRY4CDj2WG6n2AdRvcMPv4KCU7W2Ie6Qco4E?e=gL2evX", embed: "https://1drv.ms/b/c/2cea8bedd36ce876/IQTzxvmXasbuQ6Zg3zav95a6AaUy0JAU5aEMaNw8lzuDBfM" },
   { name: "شهادة غرفة التجارة · 2027", href: "https://1drv.ms/b/c/2cea8bedd36ce876/IQD3UoDfHYvfSZpYOWuQ5a-nAREpyhuJhG7IExsCnQDtc3M?e=zVjVfO", embed: "https://1drv.ms/b/c/2cea8bedd36ce876/IQT3UoDfHYvfSZpYOWuQ5a-nAfFAM1EXphUBD1LN5Y22vxQ" },
   { name: "شهادة الامتثال للدفاع المدني · 2027", href: "https://1drv.ms/b/c/2cea8bedd36ce876/IQC7N38mfqFWSLuOmUySDf6SAUZt1jAqHc8XScTHWU7tAo8?e=NwDSOT", embed: "https://1drv.ms/b/c/2cea8bedd36ce876/IQS7N38mfqFWSLuOmUySDf6SAT8v-ujEJR09-6_eVGRZT10" },
   { name: "شهادة السجل التجاري · 2027", href: "https://1drv.ms/b/c/2cea8bedd36ce876/IQCOaVhGb_i0T5x-gcBC67jfAXwtN-RuS3uM5X-pRfmGtFM?e=9ouMEo", embed: "https://1drv.ms/b/c/2cea8bedd36ce876/IQSOaVhGb_i0T5x-gcBC67jfAQF4BgM9CABeCWubo6pJsPQ" },
